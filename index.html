@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1GNH49GND"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L1GNH49GND');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Norberg Webdesign – Profesjonelle nettsider for lokale bedrifter</title>
+<meta name="description" content="Kundene dine googler deg. Finner de deg? Vi lager profesjonelle nettsider for lokale bedrifter. Gratis utkast – ingen betaling før du er fornøyd."/>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" href="skog.mp4" as="video" type="video/mp4">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Figtree',system-ui,sans-serif;font-weight:400;font-size:16px;line-height:1.65;color:#eef6ef;background:#0a1a0e;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{background:none;border:none;cursor:pointer;font-family:inherit}
+
+:root{
+  --bg:#0a1a0e;
+  --bg2:#0d2010;
+  --bg3:#112614;
+  --g:#5cb85c;
+  --g2:#6fcf6f;
+  --g3:#22c55e;
+  --gg:rgba(92,184,92,.16);
+  --gg2:rgba(92,184,92,.07);
+  --light:#eef6ef;
+  --dim:rgba(238,246,239,.63);
+  --faint:rgba(238,246,239,.30);
+  --border:rgba(238,246,239,.07);
+  --border-g:rgba(92,184,92,.22);
+  --W:1160px;
+  --hh:72px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+/* GRAIN */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.032;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat:repeat;background-size:200px 200px;
+}
+
+.W{width:min(var(--W),100%);margin-inline:auto;padding-inline:22px}
+
+/* BUTTONS */
+.btn{
+  position:relative;overflow:hidden;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Figtree',sans-serif;font-weight:500;font-size:16px;
+  padding:18px 32px;border-radius:12px;border:1.5px solid transparent;
+  cursor:pointer;transition:transform .22s var(--ease),box-shadow .22s ease,border-color .2s,background .2s,color .2s;
+  white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+.btn-g{background:var(--g);color:#0a1a0e;border-color:var(--g);font-weight:600}
+.btn-g::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
+  transform:translateX(-110%);transition:transform .55s ease;
+}
+.btn-g:hover::after{transform:translateX(110%)}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 14px 40px var(--gg),0 0 0 1px rgba(92,184,92,.28)}
+.btn-g:active{transform:translateY(0) scale(.97)}
+.btn-ol{background:transparent;color:var(--light);border-color:rgba(238,246,239,.14)}
+.btn-ol:hover{border-color:var(--g);color:var(--g);transform:translateY(-2px)}
+.btn-ol:active{transform:scale(.97)}
+
+/* EYEBROW */
+.ew{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:18px;font-weight:500}
+.ew::before{content:'';width:24px;height:1px;background:var(--g);flex-shrink:0}
+.ewc{justify-content:center}
+.ewc::before,.ewc::after{content:'';width:24px;height:1px;background:var(--g);flex-shrink:0}
+
+h2.tt{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5.5vw,52px);line-height:1.05;color:var(--light);margin-bottom:18px;letter-spacing:-.025em}
+h2.tt em{font-style:normal;color:var(--g)}
+.bt{font-size:16px;line-height:1.82;color:#eef6ef}
+
+/* REVEAL SYSTEM */
+.reveal{opacity:0;transition:opacity .75s var(--ease)}
+.reveal.v{opacity:1}
+
+.rd1{transition-delay:.1s}
+.rd2{transition-delay:.2s}
+.rd3{transition-delay:.3s}
+.rd4{transition-delay:.4s}
+.reveal-left{opacity:0;transform:translateX(-36px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal-right{opacity:0;transform:translateX(36px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal-left.v,.reveal-right.v{opacity:1;transform:none}
+.reveal-scale{opacity:0;transform:scale(.97);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal-scale.v{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .reveal-left,.reveal-right,.reveal-scale{opacity:1;transform:none;transition:none}
+  .hero-logo-wrap,.hew,.htitle .w,.hsub,.hbtns,.hn{opacity:1;animation:none}
+  .stat{clip-path:none!important}
+  .particle{display:none!important}
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* HEADER */
+#hdr{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--hh);transition:background .4s,box-shadow .4s,backdrop-filter .4s}
+#hdr.sc{background:rgba(10,26,14,.88);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 1px 0 var(--border)}
+.hi{display:flex;align-items:center;height:var(--hh);width:min(var(--W),100%);margin-inline:auto;padding-inline:22px}
+.hlogo{margin-right:auto;flex-shrink:0}
+.hlogo img{height:128px;width:auto;object-fit:contain}
+
+nav.dn{display:flex;gap:32px;margin-right:24px}
+nav.dn a{position:relative;font-size:13px;letter-spacing:.01em;text-transform:none;color:var(--dim);transition:color .2s;font-weight:400;font-family:'DM Serif Display',serif}
+nav.dn a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--g);transition:width .3s var(--ease)}
+nav.dn a:hover{color:var(--g)}
+nav.dn a:hover::after{width:100%}
+.hcta{padding:10px 22px;font-size:11px;letter-spacing:.06em;border-radius:8px}
+
+.ham{display:none;flex-direction:column;justify-content:center;gap:5px;width:30px;height:44px}
+.ham span{display:block;height:1.5px;background:var(--light);border-radius:2px;transition:all .35s var(--ease)}
+.ham.o span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.o span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.o span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.mm{display:none;position:fixed;inset:0;z-index:499;background:rgba(10,26,14,.97);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:32px 24px}
+.mm.o{display:flex}
+.mm a.ml{font-family:'DM Serif Display',serif;font-size:20px;font-weight:400;color:var(--light);border:1px solid rgba(238,246,239,.12);border-radius:12px;padding:14px 48px;width:100%;max-width:320px;text-align:center;transition:border-color .2s,color .2s;letter-spacing:-.01em}
+.mm a.ml:hover{border-color:var(--g);color:var(--g)}
+.mm-b{display:flex;flex-direction:column;align-items:stretch;gap:12px;width:100%;max-width:320px;margin-top:22px}
+
+/* HERO */
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:var(--hh);overflow:hidden}
+
+.hv{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hv video{width:100%;height:100%;object-fit:cover;display:block;backface-visibility:hidden;will-change:transform;animation:kbZ 22s ease-in-out infinite alternate;transform-origin:center center}
+@keyframes kbZ{0%{transform:scale(1.0)}33%{transform:scale(1.06) translate(-1%,-.5%)}66%{transform:scale(1.04) translate(.8%,.3%)}100%{transform:scale(1.08) translate(-.5%,.5%)}}
+@media(max-width:768px){
+  .hv video{animation:none;transform:scale(1.04)}
+  .hero-logo-wrap img{height:130px}
+}
+.hv-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,26,14,.68) 0%,rgba(10,26,14,.42) 30%,rgba(10,26,14,.7) 65%,rgba(10,26,14,1) 100%)}
+.hv-ov2{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,transparent 20%,rgba(10,26,14,.55) 100%)}
+
+/* Ambient glows */
+.orb{position:absolute;border-radius:50%;pointer-events:none;animation:orbF 9s ease-in-out infinite}
+.orb1{width:700px;height:700px;background:radial-gradient(circle,rgba(92,184,92,.07) 0%,transparent 70%);top:-200px;right:-150px;filter:blur(60px);z-index:1}
+.orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(92,184,92,.05) 0%,transparent 70%);bottom:0;left:-120px;filter:blur(60px);animation-delay:-4.5s;z-index:1}
+@keyframes orbF{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.05)}}
+
+.hero-inner{position:relative;z-index:2;width:min(var(--W),100%);margin-inline:auto;padding-inline:22px;padding-bottom:100px;display:flex;flex-direction:column;align-items:center;text-align:center}
+
+.hero-logo-wrap{
+  margin-bottom:12px;
+  opacity:0;animation:fu .9s var(--ease) .1s forwards;
+  position:relative;
+}
+.hero-logo-wrap img{
+  height:180px;width:auto;object-fit:contain;
+  margin:0 auto;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes shadowPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scaleX(1); }
+  50% { opacity: 0.15; transform: translateX(-50%) scaleX(0.55); }
+}
+.hero-logo-wrap img {
+  animation: logoFloat 7s ease-in-out infinite;
+  filter:
+    drop-shadow(0 0 16px rgba(141,214,56,0.75))
+    drop-shadow(0 0 48px rgba(141,214,56,0.35))
+    drop-shadow(0 0 80px rgba(141,214,56,0.18));
+}
+.hero-logo-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 110px;
+  height: 14px;
+  background: radial-gradient(ellipse, rgba(141,214,56,0.45) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: shadowPulse 5s ease-in-out infinite;
+  filter: blur(3px);
+}
+
+.hew{
+  display:flex;justify-content:center;align-items:center;gap:8px;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--g);
+  margin-bottom:22px;font-weight:500;
+  opacity:0;animation:fu .8s var(--ease) .38s forwards;
+}
+.hew::before,.hew::after{content:'';width:20px;height:1px;background:var(--g)}
+
+/* Word-by-word hero headline */
+.htitle{
+  font-family:'DM Serif Display',serif;font-weight:400;
+  font-size:clamp(46px,9.5vw,84px);
+  line-height:1.02;color:#ffffff;
+  margin-bottom:26px;letter-spacing:-.01em;
+  max-width:800px;
+  text-shadow:0 2px 32px rgba(0,0,0,.8),0 1px 4px rgba(0,0,0,.9);
+}
+.htitle .w{
+  display:inline-block;
+  opacity:0;animation:wUp .72s var(--ease) forwards;
+}
+.htitle .w.acc{color:var(--g)}
+.htitle .w:nth-child(1){animation-delay:.52s}
+.htitle .w:nth-child(2){animation-delay:.82s}
+.htitle .w:nth-child(3){animation-delay:1.12s}
+
+@keyframes wUp{
+  from{opacity:0;transform:translateY(42px);filter:blur(5px)}
+  to{opacity:1;transform:none;filter:blur(0)}
+}
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+.hsub{
+  font-size:clamp(16px,3vw,18px);line-height:1.78;color:#eef6ef;
+  max-width:520px;margin:0 auto 42px;
+  opacity:0;animation:fu .8s var(--ease) 1.32s forwards;
+  text-shadow:0 1px 12px rgba(0,0,0,.85),0 2px 4px rgba(0,0,0,.7);
+}
+.hbtns{
+  display:flex;flex-direction:column;gap:12px;width:100%;max-width:360px;
+  opacity:0;animation:fu .8s var(--ease) 1.52s forwards;
+}
+.hbtns .btn{width:100%;font-size:17px;padding:20px 28px;border-radius:14px}
+.hn{margin-top:36px;font-size:12px;color:var(--dim);width:100%;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0;animation:fu .8s var(--ease) 1.72s forwards}
+.hn::before{content:'✓';color:var(--g)}
+
+.scroll-hint{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:7px;
+  font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);
+}
+.scroll-hint svg{animation:sB 2.4s ease-in-out infinite}
+@keyframes sB{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+/* STATS */
+.stats{background:#0a1a0e;border-top:1px solid rgba(238,246,239,.04);border-bottom:1px solid rgba(238,246,239,.04)}
+.stats-g{display:grid;grid-template-columns:repeat(3,1fr);max-width:900px;margin:0 auto}
+@media(max-width:768px){
+  .stats-g{grid-template-columns:1fr}
+  .stat:nth-child(1),.stat:nth-child(3){display:none}
+  .stat:nth-child(2){border-right:none;padding:12px 16px}
+  .stat:nth-child(2) .stat-n{font-size:clamp(13px,2.5vw,18px);min-height:unset;margin-bottom:0}
+  .stat:nth-child(2) .stat-l{font-size:11px;margin-top:-4px}
+}
+.stat{padding:18px 22px;text-align:center;border-right:1px solid var(--border);clip-path:inset(0 0 100% 0);transition:background .25s,clip-path 480ms cubic-bezier(.23,1,.32,1)}
+.stat.sv{clip-path:inset(0 0 0% 0)}
+.stat:last-child{border-right:none}
+.stat:hover{background:var(--gg2)}
+.stat-n.stat-n:has(#statTyping){width:100%;justify-content:center;overflow:hidden;white-space:normal;word-break:break-word;font-size:clamp(11px,3vw,22px);line-height:1.1}
+.stat-n{font-family:'DM Serif Display',serif;font-size:clamp(16px,3vw,22px);font-weight:400;color:var(--g);line-height:1.2;margin-bottom:4px;letter-spacing:-.01em;min-height:unset;display:flex;align-items:center;justify-content:center}
+.stat-l{font-size:12px;color:#eef6ef;line-height:1.5;margin-top:8px}
+
+/* HOOK */
+#hook{background:var(--bg3);padding:100px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+#hook::before{
+  content:'"';position:absolute;top:-20px;left:50%;transform:translateX(-50%);
+  font-family:'Syne',sans-serif;font-size:clamp(140px,22vw,260px);font-weight:800;
+  color:rgba(92,184,92,.04);line-height:1;pointer-events:none;user-select:none;
+}
+.hook-inner{text-align:center;max-width:720px;margin:0 auto;position:relative}
+
+/* OM OSS */
+#om{background:var(--bg);padding:104px 0}
+.om-wrap{display:flex;flex-direction:column;gap:48px}
+.bt+.bt{margin-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 16px;
+  border:1px solid var(--border);border-radius:100px;font-size:11px;color:var(--dim);
+  background:rgba(255,255,255,.02);transition:border-color .2s,color .2s;font-weight:500;
+}
+.chip::before{content:'';width:5px;height:5px;background:var(--g);border-radius:50%;flex-shrink:0}
+.chip:hover{border-color:var(--border-g);color:var(--g)}
+
+.pc{
+  background:rgba(13,32,16,.8);border:1px solid var(--border);border-radius:18px;
+  padding:32px;position:relative;overflow:hidden;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.pc::before{
+  content:'';position:absolute;top:0;right:0;width:240px;height:240px;pointer-events:none;
+  background:radial-gradient(circle at top right,rgba(92,184,92,.1) 0%,transparent 70%);
+}
+.pc-t{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--g);margin-bottom:24px}
+.ps{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)}
+.ps:last-child{border-bottom:none;padding-bottom:0}
+.ps-n{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--g);min-width:24px;margin-top:2px;opacity:.65}
+.ps-t{font-size:14px;font-weight:600;color:var(--light);margin-bottom:3px}
+.ps-d{font-size:13px;color:#eef6ef;line-height:1.68}
+
+/* PROSJEKTER */
+#prosjekter{background:var(--bg3);padding:104px 0}
+.pj-head{text-align:center;margin-bottom:48px}
+.pj-grid{display:grid;grid-template-columns:1fr;gap:24px;max-width:420px;margin:0 auto}
+.pj-card{
+  display:block;background:rgba(13,32,16,.8);border:1px solid var(--border);border-radius:18px;
+  overflow:hidden;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:border-color .25s,box-shadow .25s,transform .3s var(--ease);
+}
+.pj-card:hover{border-color:var(--border-g);box-shadow:0 8px 40px rgba(92,184,92,.07);transform:translateY(-3px)}
+.pj-shot{aspect-ratio:16/10;overflow:hidden;background:var(--bg2)}
+.pj-shot img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.pj-card:hover .pj-shot img{transform:scale(1.04)}
+.pj-body{padding:26px 28px 28px}
+.pj-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--light);margin-bottom:8px;letter-spacing:-.01em}
+.pj-desc{font-size:16px;line-height:1.68;color:#eef6ef;margin-bottom:18px}
+.pj-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--g);transition:gap .2s}
+.pj-card:hover .pj-link{gap:10px}
+@media(min-width:860px){
+  .pj-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));max-width:760px}
+}
+
+/* TJENESTER */
+#tjenester{background:var(--bg2);padding:104px 0}
+.t-head{text-align:center;margin-bottom:48px}
+.t-grid{display:flex;flex-direction:column;gap:2px}
+.tc{
+  background:var(--bg3);border:1px solid var(--border);padding:26px 22px;
+  display:flex;align-items:flex-start;gap:18px;
+  transition:border-color .25s,background .25s,transform .3s var(--ease),box-shadow .25s;
+}
+.t-grid .tc:first-child{border-radius:14px 14px 0 0}
+.t-grid .tc:last-child{border-radius:0 0 14px 14px}
+.tc:hover{border-color:var(--border-g);background:rgba(92,184,92,.04);transform:translateX(5px);box-shadow:-5px 0 24px rgba(92,184,92,.06)}
+.tc-ico{
+  width:42px;height:42px;flex-shrink:0;background:rgba(92,184,92,.1);
+  border-radius:11px;display:flex;align-items:center;justify-content:center;
+  color:var(--g);margin-top:2px;transition:background .25s,transform .3s var(--ease);
+}
+.tc:hover .tc-ico{background:rgba(92,184,92,.2);transform:scale(1.1)}
+.tc-name{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--light);margin-bottom:5px;letter-spacing:-.01em}
+.tc-desc{font-size:13px;line-height:1.72;color:#eef6ef}
+
+/* PROSESS */
+#prosess{background:var(--bg);padding:104px 0}
+.pr-head{text-align:center;margin-bottom:56px}
+/* MOBIL FYRST */
+.pr-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 48px 0 40px;
+  position: relative;
+}
+
+/* Vertikal linje på mobil */
+.pr-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: 20px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    transparent,
+    rgba(92,184,92,.3) 15%,
+    rgba(92,184,92,.3) 85%,
+    transparent
+  );
+  z-index: 0;
+}
+
+.prs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.prs-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: 1px solid rgba(92,184,92,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .05em;
+  color: var(--g);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: background .3s, border-color .3s, box-shadow .3s;
+}
+
+.prs:hover .prs-num {
+  background: rgba(92,184,92,.12);
+  border-color: var(--g);
+  box-shadow: 0 0 24px rgba(92,184,92,.2);
+}
+
+.prs-num::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(92,184,92,.0);
+  transition: border-color .3s;
+}
+.prs:hover .prs-num::after {
+  border-color: rgba(92,184,92,.2);
+  animation: pulseRing 1.5s ease-out infinite;
+}
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.prs-body { padding-top: 4px; }
+
+.prs-t {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--light);
+  margin-bottom: 8px;
+}
+
+.prs-d {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #eef6ef;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .pr-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .pr-steps::before {
+    top: 28px;
+    bottom: auto;
+    left: calc(12.5%);
+    right: calc(12.5%);
+    width: auto;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(92,184,92,.3) 20%,
+      rgba(92,184,92,.3) 80%,
+      transparent
+    );
+  }
+  .prs {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+  }
+  .prs-num { margin-bottom: 20px; }
+  .prs-body { padding-top: 0; }
+}
+
+.rb{
+  margin-top:40px;background:rgba(92,184,92,.05);border:1px solid rgba(92,184,92,.18);
+  border-radius:14px;padding:26px;display:flex;align-items:flex-start;gap:16px;
+}
+.rb-ico{width:40px;height:40px;flex-shrink:0;background:rgba(92,184,92,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--g)}
+.rb-t{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--light);margin-bottom:5px;letter-spacing:-.01em}
+.rb-d{font-size:13px;color:var(--dim);line-height:1.7}
+
+/* FAQ */
+#faq{background:var(--bg2);padding:104px 0 64px 0}
+.faq-head{text-align:center;margin-bottom:48px}
+.faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column}
+.fqi{border-bottom:1px solid var(--border)}
+.fqq{
+  display:flex;align-items:center;justify-content:space-between;padding:22px 0;
+  cursor:pointer;gap:16px;font-size:15px;color:var(--light);transition:color .2s;
+  -webkit-tap-highlight-color:transparent;font-weight:500;
+}
+.fqq:hover{color:var(--g)}
+.fqico{
+  width:28px;height:28px;flex-shrink:0;border:1px solid rgba(238,246,239,.12);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--g);font-size:18px;font-weight:300;
+  transition:transform .38s var(--ease),border-color .2s,background .2s;
+}
+.fqi.o .fqico{transform:rotate(45deg);border-color:var(--g);background:var(--gg2)}
+.fqa{overflow:hidden;max-height:0;opacity:0;transition:max-height .42s var(--ease),opacity .35s ease}
+.fqa-inner{padding-bottom:22px;font-size:14px;color:#eef6ef;line-height:1.82}
+.fqi.o .fqa{max-height:280px;opacity:1}
+
+/* KONTAKT */
+#kontakt{background:var(--bg);padding:104px 0;position:relative;overflow:hidden}
+#kontakt::before{
+  content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);
+  width:800px;height:700px;pointer-events:none;
+  background:radial-gradient(ellipse,rgba(92,184,92,.07) 0%,transparent 65%);
+}
+.k-wrap{position:relative;z-index:1;text-align:center;max-width:580px;margin:0 auto}
+.k-wrap .tt{margin-bottom:16px}
+.k-wrap .bt{margin-bottom:42px}
+.k-btns{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.k-btns .btn{width:100%;font-size:17px;padding:20px 28px;border-radius:14px}
+.k-pref{font-size:11px;color:var(--faint);letter-spacing:.05em;margin-bottom:42px;display:flex;align-items:center;justify-content:center;gap:6px}
+.k-info{display:flex;flex-direction:column;gap:16px;padding-top:36px;border-top:1px solid var(--border)}
+.kd{display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;color:var(--dim)}
+.kd svg{color:var(--g);opacity:.7;flex-shrink:0}
+.kd a{color:var(--dim);transition:color .2s}
+.kd a:hover{color:var(--g)}
+
+/* FOOTER */
+footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
+.ft{width:min(var(--W),100%);margin-inline:auto;padding-inline:22px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ft-logo img{height:130px;object-fit:contain}
+.ft-txt{font-size:11px;color:#eef6ef;letter-spacing:.05em}
+.ft-links{display:flex;gap:20px}
+.ft-links a{font-size:11px;color:rgba(238,246,239,.18);text-transform:uppercase;letter-spacing:.09em;transition:color .2s}
+.ft-links a:hover{color:var(--g)}
+
+/* PRICING */
+#priser{background:var(--bg2);padding:104px 0;border-top:1px solid var(--border)}
+.pris-head{text-align:center;margin-bottom:56px}
+.pk-grid{display:flex;flex-direction:column;gap:20px;margin-bottom:64px}
+.pk{
+  background:rgba(13,32,16,.8);border:1px solid var(--border);border-radius:18px;
+  padding:36px;position:relative;overflow:hidden;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:border-color .25s,box-shadow .25s,transform .3s var(--ease);
+}
+.pk::before{
+  content:'';position:absolute;top:0;right:0;width:280px;height:280px;pointer-events:none;
+  background:radial-gradient(circle at top right,rgba(92,184,92,.07) 0%,transparent 70%);
+}
+.pk:hover{border-color:var(--border-g);box-shadow:0 8px 40px rgba(92,184,92,.07);transform:translateY(-3px)}
+.pk.featured{border-color:rgba(92,184,92,.3);background:rgba(13,32,16,.95)}
+.pk.featured::before{background:radial-gradient(circle at top right,rgba(92,184,92,.14) 0%,transparent 70%)}
+.pk-badge{
+  display:inline-block;padding:4px 12px;border-radius:100px;
+  background:var(--g);color:#0a1a0e;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.pk-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:10px}
+.pk-price{font-family:'Syne',sans-serif;font-size:clamp(36px,6vw,52px);font-weight:800;color:var(--light);line-height:1;letter-spacing:-.03em;margin-bottom:6px}
+.pk-price span{font-size:18px;font-weight:400;color:var(--dim);letter-spacing:0}
+.pk-sub{font-size:13px;color:var(--faint);margin-bottom:26px}
+.pk-feats{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.pk-feat{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--dim);line-height:1.5}
+.pk-feat::before{content:'✓';color:var(--g);font-weight:700;flex-shrink:0;margin-top:1px}
+.pk-note{font-size:11px;color:var(--faint);margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.pk-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+
+/* COMPARISON TABLE */
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:14px;background:rgba(13,32,16,.6)}
+.cmp{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+.cmp thead th{padding:14px 18px;text-align:left;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--border)}
+.cmp thead th.th-nw{color:var(--g)}
+.cmp tbody tr{border-bottom:1px solid var(--border)}
+.cmp tbody tr:last-child{border-bottom:none}
+.cmp tbody td{padding:13px 18px;vertical-align:middle;line-height:1.5}
+.cmp tbody td:first-child{font-weight:500;color:var(--dim)}
+.cmp .good{color:var(--g);font-weight:500}
+.cmp .bad{color:rgba(255,80,80,.7)}
+.cmp .bad s{opacity:.65}
+.cmp tbody tr:hover{background:rgba(255,255,255,.012)}
+
+/* DESKTOP */
+@media(min-width:860px){
+  .W{padding-inline:48px}
+  .hi,.ft{padding-inline:48px}
+  .hero-inner{padding-inline:48px}
+  nav.dn,.hcta{display:flex}
+  .ham{display:none}
+  .hbtns{flex-direction:row;max-width:none;justify-content:center}
+  .hbtns .btn{width:auto}
+  .om-wrap{display:block;max-width:680px}
+  .t-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px}
+  .t-grid .tc{border-radius:0!important}
+  .t-grid .tc:first-child{border-radius:14px 0 0 0!important}
+  .t-grid .tc:nth-child(3){border-radius:0 14px 0 0!important}
+  .t-grid .tc:nth-child(4){border-radius:0 0 0 14px!important}
+  .t-grid .tc:last-child{border-radius:0 0 14px 0!important}
+.k-btns{flex-direction:row;justify-content:center}
+  .k-btns .btn{width:auto}
+  .k-info{flex-direction:row;justify-content:center}
+  .ft{flex-direction:row;justify-content:space-between;text-align:left}
+  .hero-logo-wrap img{height:148px}
+  .pk-grid{flex-direction:row;align-items:stretch}
+  .pk{flex:1}
+  #pk-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:859px){
+  nav.dn,.hcta{display:none}
+  .ham{display:flex}
+}
+.stat-cursor{animation:statBlink 1s infinite;color:var(--g)}
+@keyframes statBlink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes ntm{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* FOREST PARTICLES */
+.particle{
+  position:absolute;pointer-events:none;z-index:1;border-radius:50%;
+  background:var(--g);
+  box-shadow:0 0 var(--glow,10px) rgba(92,184,92,.75),0 0 calc(var(--glow,10px)*2.5) rgba(92,184,92,.2);
+  width:var(--size,3px);height:var(--size,3px);
+  animation:particleDrift var(--dur,9s) ease-in-out var(--delay,0s) infinite;
+  opacity:0;will-change:transform,opacity;
+}
+@keyframes particleDrift{
+  0%{transform:translate(0,0);opacity:0}
+  8%{opacity:var(--op,.38)}
+  30%{transform:translate(calc(var(--dx)*0.3 + var(--sx,7px)),calc(var(--dy)*0.3))}
+  65%{transform:translate(calc(var(--dx)*0.65 - var(--sx,7px)),calc(var(--dy)*0.65))}
+  90%{opacity:var(--op,.38)}
+  100%{transform:translate(var(--dx),var(--dy));opacity:0}
+}
+
+/* BLUR CROSSFADE (typing phrase transition) */
+#statTyping{display:inline;transition:filter 150ms ease-in,opacity 150ms ease-in}
+#statTyping.st-exit{filter:blur(8px);opacity:0}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Norberg Webdesign",
+  "url": "https://norbergwebdesign.no",
+  "logo": "https://norbergwebdesign.no/favicon-96x96.png"
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hi">
+    <a href="#" class="hlogo">
+      <img src="Bilder Og Video/norberg_logo_final.png" alt="Norberg Webdesign"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span style="display:none;font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--light)">Norberg <span style="color:var(--g)">Webdesign</span></span>
+    </a>
+    <nav class="dn" aria-label="Navigasjon">
+      <a href="#om">Om oss</a>
+      <a href="#prosjekter">Prosjekter</a>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#prosess">Prosessen</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="sms:+4748498627" class="btn btn-g hcta">Send SMS</a>
+    <button class="ham" id="ham" aria-label="Åpne meny" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBIL MENY -->
+<div class="mm" id="mm" aria-hidden="true">
+  <a href="#om" class="ml" onclick="cM()">Om oss</a>
+  <a href="#prosjekter" class="ml" onclick="cM()">Prosjekter</a>
+  <a href="#tjenester" class="ml" onclick="cM()">Tjenester</a>
+  <a href="#prosess" class="ml" onclick="cM()">Prosessen</a>
+  <a href="#faq" class="ml" onclick="cM()">FAQ</a>
+  <a href="#kontakt" class="ml" onclick="cM()">Kontakt</a>
+  <div class="mm-b">
+    <a href="sms:+4748498627" class="btn btn-g" onclick="cM()">SMS: 484 98 627</a>
+    <a href="mailto:norbergwebdesign@gmail.com" class="btn btn-ol" onclick="cM()">Send e-post</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hv">
+    <video autoplay muted loop playsinline webkit-playsinline preload="none" poster="skog-poster.jpg" id="heroVideo">
+      <source src="skog.mp4" type="video/mp4"/>
+    </video>
+    <div class="hv-ov"></div>
+    <div class="hv-ov2"></div>
+  </div>
+
+  <div class="orb orb1" aria-hidden="true"></div>
+  <div class="orb orb2" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-logo-wrap">
+      <img src="Bilder Og Video/norberg_logo_final.png" alt="Norberg Webdesign" loading="eager" decoding="async"
+        onerror="this.style.display='none'"/>
+    </div>
+
+    <h1 class="htitle">
+      <span class="w">Kundene dine</span><br>
+      <span class="w acc">googler deg.</span><br>
+      <span class="w acc">Finner de deg?</span>
+    </h1>
+
+    <p class="hsub">Lokale bedrifter mister kunder hver dag til noen med nettside. Du ser aldri dette tapet — men det skjer. Vi fikser det. Du betaler ingenting før du er fornøyd.</p>
+
+    <div class="hbtns">
+      <a href="sms:+4748498627" class="btn btn-g">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Send SMS nå
+      </a>
+      <a href="mailto:norbergwebdesign@gmail.com" class="btn btn-ol">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Send e-post
+      </a>
+    </div>
+
+    <p class="hn">Gratis utkast. Du betaler ingenting før du er fornøyd.</p>
+  </div>
+
+  <!-- Forest spore particles -->
+  <div aria-hidden="true">
+    <div class="particle" style="left:6%;bottom:18%;--dur:12s;--delay:0s;--dx:-10px;--dy:-230px;--sx:8px;--size:2px;--op:.44;--glow:8px"></div>
+    <div class="particle" style="left:14%;bottom:28%;--dur:9s;--delay:3.2s;--dx:14px;--dy:-200px;--sx:-6px;--size:3px;--op:.34;--glow:11px"></div>
+    <div class="particle" style="left:22%;bottom:14%;--dur:14s;--delay:1.0s;--dx:-18px;--dy:-260px;--sx:10px;--size:2px;--op:.38;--glow:7px"></div>
+    <div class="particle" style="left:31%;bottom:24%;--dur:10s;--delay:5.5s;--dx:10px;--dy:-190px;--sx:-8px;--size:2px;--op:.28;--glow:6px"></div>
+    <div class="particle" style="left:40%;bottom:32%;--dur:8s;--delay:0.7s;--dx:-12px;--dy:-175px;--sx:7px;--size:3px;--op:.40;--glow:12px"></div>
+    <div class="particle" style="left:50%;bottom:16%;--dur:13s;--delay:2.2s;--dx:16px;--dy:-240px;--sx:-9px;--size:2px;--op:.30;--glow:7px"></div>
+    <div class="particle" style="left:59%;bottom:26%;--dur:11s;--delay:6.8s;--dx:-8px;--dy:-210px;--sx:6px;--size:2px;--op:.36;--glow:8px"></div>
+    <div class="particle" style="left:68%;bottom:20%;--dur:9s;--delay:1.8s;--dx:12px;--dy:-185px;--sx:-7px;--size:3px;--op:.32;--glow:10px"></div>
+    <div class="particle" style="left:77%;bottom:30%;--dur:15s;--delay:4.0s;--dx:-14px;--dy:-250px;--sx:9px;--size:2px;--op:.26;--glow:6px"></div>
+    <div class="particle" style="left:85%;bottom:22%;--dur:10s;--delay:0.4s;--dx:8px;--dy:-195px;--sx:-6px;--size:2px;--op:.38;--glow:8px"></div>
+    <div class="particle" style="left:92%;bottom:14%;--dur:12s;--delay:7.5s;--dx:-10px;--dy:-220px;--sx:5px;--size:3px;--op:.30;--glow:10px"></div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Scroll
+  </div>
+</section>
+
+
+<section id="google-hook" style="background:#071209;padding:80px 0;border-top:1px solid rgba(238,246,239,.06);border-bottom:1px solid rgba(238,246,239,.06)">
+  <div class="W">
+    <div style="max-width:640px;margin:0 auto;text-align:center">
+      <p style="font-family:'DM Serif Display',serif;font-size:clamp(22px,4vw,34px);color:#eef6ef;line-height:1.4;margin-bottom:20px">
+        "Når folk googler <em style="color:#5cb85c;font-style:normal">«frisør Oslo»</em> eller <em style="color:#5cb85c;font-style:normal">«rørlegger Ålesund»</em> — velger de en av de bedriftene som dukker opp. Ikke deg."
+      </p>
+      <p style="font-size:16px;color:#eef6ef;line-height:1.75">
+        Derfor lager vi nettsider til lokale bedrifter — slik at kundene finner deg og ringer deg.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div id="nt" style="overflow:hidden;background:rgba(92,184,92,.03);border-top:1px solid rgba(92,184,92,.1);border-bottom:1px solid rgba(92,184,92,.1);padding:14px 0"><div id="nti" style="display:flex;gap:64px;white-space:nowrap;width:max-content"></div></div>
+
+<!-- OM OSS -->
+
+<section id="om">
+  <div class="W">
+    <div class="om-wrap">
+      <div class="reveal-left">
+        <span class="ew">Om Norberg Webdesign</span>
+        <h2 class="tt">Vi lager nettsiden.<br><em>Du trenger ikke gjøre noe.</em></h2>
+        <p class="bt">Vi lager nettsider for lokale bedrifter over hele Norge — frisører, håndverkere og alle andre som er gode på det de gjør, men som ingen finner på nett. Målet er at kundene dine skal finne deg på Google og enkelt kunne ta kontakt.</p>
+        <p class="bt">Vi har god kjennskap til lokale bedrifter i Sogn og Vestland. Ingen teknisk kunnskap nødvendig — send én SMS så tar vi resten.</p>
+        <div class="chips">
+          <span class="chip">Mobilvennlig</span>
+          <span class="chip">Rask levering</span>
+          <span class="chip">Norsk bedrift</span>
+          <span class="chip">Betaling via faktura</span>
+          <span class="chip">Gratis utkast</span>
+          <span class="chip">Hele Norge</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROSJEKTER -->
+<section id="prosjekter">
+  <div class="W">
+    <div class="pj-head reveal">
+      <span class="ew ewc">Prosjekter</span>
+      <h2 class="tt">Noen av <em>prosjektene våre</em></h2>
+      <p class="bt" style="max-width:500px;margin-inline:auto;font-size:18px">Et utvalg av nettsider vi har laget.</p>
+    </div>
+    <div class="pj-grid">
+      <a href="https://nigardsbreencamping.com" target="_blank" rel="noopener noreferrer" class="pj-card reveal" aria-label="Se Nigardsbreen Camping (åpnes i ny fane)">
+        <div class="pj-shot">
+          <img src="Bilder%20Og%20Video/nigardsbreen-camping.png" alt="Skjermbilde av Nigardsbreen Camping" loading="lazy" decoding="async"/>
+        </div>
+        <div class="pj-body">
+          <div class="pj-name">Nigardsbreen Camping</div>
+          <p class="pj-desc">Campingplass i Breheimen nasjonalpark — booking, fleirspråklig nettside og full digital synlegheit for ein av Jostedalen sine mest besøkte overnattingsstader.</p>
+          <span class="pj-link">Les meir →</span>
+        </div>
+      </a>
+      <a href="https://skathelle.no" target="_blank" rel="noopener noreferrer" class="pj-card reveal" aria-label="Se Skathelle.no (åpnes i ny fane)">
+        <div class="pj-shot">
+          <img src="Bilder%20Og%20Video/skathelle.png" alt="Skjermbilde av Skathelle.no" loading="lazy" decoding="async"/>
+        </div>
+        <div class="pj-body">
+          <div class="pj-name">Skathelle.no</div>
+          <p class="pj-desc">Kulturarv-nettside som dokumenterer skathellekasting — ein tradisjonell steinkastesport frå Jostedalen.</p>
+          <span class="pj-link">Les meir →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TJENESTER -->
+<section id="tjenester">
+  <div class="W">
+    <div class="t-head reveal">
+      <span class="ew ewc">Tjenester</span>
+      <h2 class="tt">Alt du trenger –<br><em>ingenting du ikke trenger</em></h2>
+      <p class="bt" style="max-width:460px;margin-inline:auto">Håndkoda fra bunnen av — ikke maler, ikke abonnement.</p>
+    </div>
+    <div class="t-grid">
+      <div class="tc reveal">
+        <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div>
+        <div><div class="tc-name">Moderne nettside</div><div class="tc-desc">Håndkoda fra bunnen av – ser dyr ut, koster ikke deretter.</div></div>
+      </div>
+      <div class="tc reveal rd1">
+        <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <div><div class="tc-name">Mobilvennlig</div><div class="tc-desc">Over 80% av kundene dine søker på telefon. Vi prioriterer det.</div></div>
+      </div>
+      <div class="tc reveal rd2">
+        <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><div class="tc-name">Ring og SMS-knapp</div><div class="tc-desc">Kundene tar kontakt med ett trykk – direkte fra nettsiden.</div></div>
+      </div>
+      <div class="tc reveal">
+        <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="tc-name">Kontaktinfo</div><div class="tc-desc">Adresse, åpningstider, telefon og e-post – alltid lett å finne.</div></div>
+      </div>
+      <div class="tc reveal rd1">
+        <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <div><div class="tc-name">Bilder og galleri</div><div class="tc-desc">Vi henter bilder fra Facebook og Instagram – du trenger ikke gjøre noe.</div></div>
+      </div>
+      <div class="tc reveal rd2">
+        <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="tc-name">Hosting og drift</div><div class="tc-desc">Vi eier og drifter alt. Domene, hosting og vedlikehold inkludert.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROSESS -->
+<section id="prosess">
+  <div class="W">
+    <div class="pr-head reveal">
+      <span class="ew ewc">Prosessen</span>
+      <h2 class="tt">Fra ingen nettside<br><em>til synlig på Google.</em></h2>
+      <p class="bt" style="max-width:460px;margin-inline:auto">Du tar kontakt. Vi gjør resten.</p>
+    </div>
+    <div class="pr-steps">
+      <div class="prs reveal">
+        <div class="prs-num">1</div>
+        <div class="prs-body"><div class="prs-t">Ta kontakt</div><div class="prs-d">Send en SMS eller e-post. Fortell oss hva bedriften gjør – det er alt. Har du Facebook eller Instagram henter vi info derfra.</div></div>
+      </div>
+      <div class="prs reveal rd1">
+        <div class="prs-num">2</div>
+        <div class="prs-body"><div class="prs-t">Vi lager utkastet</div><div class="prs-d">Vi setter i gang og lager et ferdig utkast – ofte samme dag eller innen få dager. Gratis og uforpliktende.</div></div>
+      </div>
+      <div class="prs reveal">
+        <div class="prs-num">3</div>
+        <div class="prs-body"><div class="prs-t">Du godkjenner</div><div class="prs-d">Du ser utkastet og bestemmer. Vil du ha det? Vi sender faktura. Vil du ikke? Ingen kostnad – det er greit.</div></div>
+      </div>
+      <div class="prs reveal rd1">
+        <div class="prs-num">4</div>
+        <div class="prs-body"><div class="prs-t">Nettsiden er på nett</div><div class="prs-d">Vi legger alt ut. Betaling via faktura. Drift og vedlikehold er vår jobb – du trenger ikke tenke på noe mer.</div></div>
+      </div>
+    </div>
+    <div class="rb reveal">
+      <div class="rb-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div><div class="rb-t">Du ser ferdig nettside FØR du bestemmer deg.</div><div class="rb-d">De fleste byråer krever betaling før de starter. Vi gjør det motsatte.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRISER -->
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="W">
+    <div class="faq-head reveal">
+      <span class="ew ewc">FAQ</span>
+      <h2 class="tt">Ofte stilte<br><em>spørsmål</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="fqi"><div class="fqq">Hva må jeg gjøre som kunde?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Nesten ingenting. Send oss en melding og fortell hva bedriften gjør. Har du Facebook eller Instagram henter vi bilder og info derfra. Vi tar oss av alt praktisk.</div></div></div>
+      <div class="fqi"><div class="fqq">Hvor lang tid tar det?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Vi jobber raskt. Ofte kan du se et ferdig utkast samme dag eller innen få dager. Når du godkjenner er nettsiden på nett kort tid etter.</div></div></div>
+      <div class="fqi"><div class="fqq">Hva skjer om jeg ikke liker utkastet?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Ingen problem. Utkastet er gratis og du er ikke forpliktet til noe. Liker du det ikke, koster det deg ingenting.</div></div></div>
+      <div class="fqi"><div class="fqq">Trenger jeg å kjøpe domene selv?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Nei, du trenger ikke gjøre noe. Domene, hosting og alt teknisk er inkludert – vi ordner det hele for deg.</div></div></div>
+      <div class="fqi"><div class="fqq">Kan jeg få endret innholdet etterpå?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Ja. Send oss en SMS eller e-post med hva du vil endre, så ordner vi det. Mindre endringer som telefonnummer og åpningstider er inkludert. Større endringer avtales og faktureres separat.</div></div></div>
+      <div class="fqi"><div class="fqq">Lager dere bookingsystem?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Vi lager ikke bookingsystemer, men har du allerede et bookingsystem fra en ekstern tjeneste kan vi legge inn en lenke eller integrasjon til det på nettsiden din – slik at kundene dine enkelt kan booke direkte.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="W">
+    <div class="k-wrap">
+      <span class="ew ewc reveal">Kontakt</span>
+      <h2 class="tt reveal">Send én SMS.<br><em>Vi tar det derfra.</em></h2>
+      <p class="bt reveal rd1">Ingen møter, ingen skjemaer. Send en melding — gjerne med noen bilder eller litt info om bedriften. Vi tar resten.</p>
+      <div class="k-btns reveal rd2">
+        <a href="sms:+4748498627" class="btn btn-g">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SMS: 484 98 627
+        </a>
+        <a href="mailto:norbergwebdesign@gmail.com" class="btn btn-ol">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send e-post
+        </a>
+      </div>
+      <p class="k-pref reveal rd3">Send én SMS – så tar vi den korte praten som trengs</p>
+      <div class="k-info reveal rd4">
+        <div class="kd"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><a href="sms:+4748498627">+47 484 98 627</a></div>
+        <div class="kd"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:norbergwebdesign@gmail.com">norbergwebdesign@gmail.com</a></div>
+        <div class="kd"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Hele Norge</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ft-logo">
+      <img src="Bilder Og Video/norberg_logo_final.png" alt="Norberg Webdesign" loading="lazy" decoding="async"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span style="display:none;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:rgba(238,246,239,.3)">Norberg Webdesign</span>
+    </div>
+    <div class="ft-txt">© 2026 Norberg Webdesign · Org.nr 837 471 532</div>
+    <div class="ft-links">
+      <a href="mailto:norbergwebdesign@gmail.com">E-post</a>
+      <a href="sms:+4748498627">SMS</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll glass
+const hdr=document.getElementById('hdr');
+let t=false;
+const upH=()=>{hdr.classList.toggle('sc',scrollY>50);t=false};
+addEventListener('scroll',()=>{if(!t){requestAnimationFrame(upH);t=true}},{passive:true});
+upH();
+
+// Hero video
+const vid=document.getElementById('heroVideo');
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(vid){
+  if(rm){vid.pause();vid.removeAttribute('autoplay');vid.style.display='none'}
+  else{vid.play().catch(()=>{})}
+}
+
+// Mobile menu
+const ham=document.getElementById('ham'),mm=document.getElementById('mm');
+ham.addEventListener('click',()=>{
+  const open=mm.classList.toggle('o');
+  ham.classList.toggle('o');
+  ham.setAttribute('aria-expanded',open);
+  mm.setAttribute('aria-hidden',!open);
+});
+function cM(){
+  mm.classList.remove('o');
+  ham.classList.remove('o');
+  ham.setAttribute('aria-expanded','false');
+  mm.setAttribute('aria-hidden','true');
+}
+
+// FAQ smooth accordion
+document.querySelectorAll('.fqq').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,was=item.classList.contains('o');
+    document.querySelectorAll('.fqi').forEach(i=>i.classList.remove('o'));
+    if(!was) item.classList.add('o');
+  });
+});
+
+// Scroll reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target)}
+}),{threshold:0.06});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>obs.observe(el));
+
+// === STAT CLIP-PATH STAGGER REVEAL ===
+const statsGrid = document.querySelector('.stats-g');
+if(statsGrid){
+  const statItems = statsGrid.querySelectorAll('.stat');
+  const statsObs = new IntersectionObserver(es=>{
+    if(es[0].isIntersecting){
+      statsObs.disconnect();
+      statItems.forEach((el,i)=>setTimeout(()=>el.classList.add('sv'), i*80));
+    }
+  },{threshold:0.2});
+  statsObs.observe(statsGrid);
+}
+
+// === STAT KR — OVERSHOOT COUNTER ===
+const krEl = document.getElementById('statKr');
+if(krEl){
+  let counted = false;
+  const krObs = new IntersectionObserver(es=>{
+    if(es[0].isIntersecting && !counted){
+      counted = true;
+      krObs.disconnect();
+      const peak = 700, total = 1200, overshoot = 90;
+      const start = performance.now();
+      krEl.style.cssText += 'transition:filter 250ms ease;filter:blur(2.5px)';
+      function tick(now){
+        const elapsed = now - start;
+        let val;
+        if(elapsed < peak){
+          const p = elapsed / peak;
+          val = Math.round((1 - Math.pow(1-p, 2.5)) * overshoot);
+        } else if(elapsed < total){
+          const p = (elapsed - peak) / (total - peak);
+          val = Math.round(overshoot * (1 - Math.pow(p, 2)));
+          krEl.style.filter = `blur(${(1-p)*2.5}px)`;
+        } else {
+          krEl.textContent = '0 kr';
+          krEl.style.filter = 'blur(0px)';
+          setTimeout(()=>{ krEl.style.cssText = krEl.style.cssText.replace(/transition:[^;]+;?/,'').replace(/filter:[^;]+;?/,'') }, 260);
+          return;
+        }
+        krEl.textContent = val + ' kr';
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+  },{threshold:0.4});
+  krObs.observe(krEl);
+}
+
+// === STATS TYPING — BLUR-CROSSFADE TRANSITIONS ===
+const statPhrases = ['Null teknisk.', 'Én melding.', 'Vi tar resten.'];
+let stPI = 0, stCI = 0;
+const stEl = document.getElementById('statTyping');
+function statTypeForward(){
+  if(!stEl) return;
+  const p = statPhrases[stPI];
+  stEl.textContent = p.slice(0, ++stCI);
+  if(stCI === p.length){ setTimeout(statTransition, 1900); }
+  else { setTimeout(statTypeForward, 66); }
+}
+function statTransition(){
+  if(!stEl) return;
+  stEl.classList.add('st-exit');
+  setTimeout(()=>{
+    stPI = (stPI + 1) % statPhrases.length;
+    stCI = 0;
+    stEl.textContent = '';
+    stEl.style.transition = 'none';
+    stEl.classList.remove('st-exit');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      stEl.style.transition = '';
+      setTimeout(statTypeForward, 40);
+    }));
+  }, 160);
+}
+statTypeForward();
+
+// TICKER
+const nm=['Ingen nettside = usynlig.','De fant naboen din. Ikke deg.','Gratis å se. Ingen risiko.','Du mister kunder du ikke vet om.','Send én melding. Vi tar resten.','På nett innen en uke.'];
+const nti=document.getElementById('nti');
+if(nti){nm.concat(nm).forEach((s,i)=>{const sp=document.createElement('span');sp.style.cssText='font-size:13px;font-weight:500;color:rgba(238,246,239,0.55);font-family:Figtree,sans-serif';sp.textContent=s;if(i<nm.length*2-1){const d=document.createElement('span');d.style.cssText='display:inline-block;width:4px;height:4px;background:rgba(92,184,92,0.5);border-radius:50%;margin-left:64px;vertical-align:middle';sp.appendChild(d);}nti.appendChild(sp);});nti.style.animation='ntm 28s linear infinite';}
+</script>
+</body>
+</html>

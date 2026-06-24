@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html data-src-ver="497ef2fb" lang="no" data-om-id="497ef2fb:0"><head data-om-id="497ef2fb:1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style data-omelette-injected="">html,body{background:transparent}</style><script data-omelette-injected="">(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="utf-8" data-om-id="497ef2fb:2">
+<title>Norberg Webdesign — Facebook cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/" data-om-id="497ef2fb:3">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" data-om-id="497ef2fb:4">
+<link href="Facebook%20Cover_data_002/css2.css" rel="stylesheet" data-om-id="497ef2fb:5">
+<style>
+  :root {
+    --forest-deep: #0f2318;
+    --forest-mid: #163020;
+    --forest-light: #1f4229;
+    --leaf-bright: #8dd638;
+    --leaf-mid: #5cb82f;
+    --leaf-dark: #3a8a25;
+    --white: #ffffff;
+    --white-70: rgba(255, 255, 255, 0.70);
+    --white-40: rgba(255, 255, 255, 0.40);
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a1610;
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cover {
+    width: 820px;
+    height: 360px;
+    background: var(--forest-deep);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Subtle radial glow behind content */
+  .glow {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 70% at 50% 30%, rgba(141, 214, 56, 0.07), transparent 70%);
+    z-index: 0;
+  }
+
+  /* Subtle grain/noise via SVG */
+  .grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* Geometric grid + nodes — right side, decorative */
+  .geo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  /* Safe-zone centered content (640 wide, top half) */
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 640px;
+    margin: 0 auto;
+    padding-top: 78px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--leaf-bright);
+    margin-bottom: 18px;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--leaf-bright);
+    opacity: 0.6;
+  }
+
+  h1 {
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--white);
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  .sub {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--white-70);
+    margin: 0;
+  }
+
+  .sub .accent {
+    color: var(--leaf-bright);
+    font-weight: 500;
+  }
+
+  /* Small bottom-right wordmark, well clear of profile pic area */
+  .wordmark {
+    position: absolute;
+    bottom: 22px;
+    right: 28px;
+    z-index: 2;
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--white-40);
+  }
+
+  .wordmark span {
+    color: var(--leaf-bright);
+  }
+
+  /* Centered separator dot */
+  .sep {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--leaf-bright);
+    vertical-align: middle;
+    margin: 0 10px 3px;
+    opacity: 0.7;
+  }
+
+  /* Page chrome (off-canvas info, hidden in export) */
+  .meta {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    font-family: "DM Sans", sans-serif;
+  }
+</style>
+<style data-designer-overlay="1"></style></head>
+<body data-om-id="497ef2fb:6">
+  <div class="cover" id="cover" data-om-id="497ef2fb:7">
+    <div class="glow" data-om-id="497ef2fb:8"></div>
+
+    <!-- Decorative geometric grid + faint node connections, right side -->
+    <svg class="geo" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-om-id="497ef2fb:9">
+      <defs data-om-id="497ef2fb:10">
+        <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0" data-om-id="497ef2fb:11">
+          <stop offset="0%" stop-color="#1f4229" stop-opacity="0" data-om-id="497ef2fb:12"></stop>
+          <stop offset="40%" stop-color="#2f6638" stop-opacity="0.55" data-om-id="497ef2fb:13"></stop>
+          <stop offset="100%" stop-color="#5cb82f" stop-opacity="0.85" data-om-id="497ef2fb:14"></stop>
+        </linearGradient>
+        <linearGradient id="fadeSoft" x1="0" y1="0" x2="1" y2="0" data-om-id="497ef2fb:15">
+          <stop offset="0%" stop-color="#1f4229" stop-opacity="0" data-om-id="497ef2fb:16"></stop>
+          <stop offset="100%" stop-color="#3a8a25" stop-opacity="0.45" data-om-id="497ef2fb:17"></stop>
+        </linearGradient>
+      </defs>
+
+      <!-- Thin vertical grid lines -->
+      <g stroke="url(#fadeSoft)" stroke-width="1" data-om-id="497ef2fb:18">
+        <line x1="40" y1="0" x2="40" y2="360" data-om-id="497ef2fb:19"></line>
+        <line x1="100" y1="0" x2="100" y2="360" data-om-id="497ef2fb:20"></line>
+        <line x1="160" y1="0" x2="160" y2="360" data-om-id="497ef2fb:21"></line>
+        <line x1="220" y1="0" x2="220" y2="360" data-om-id="497ef2fb:22"></line>
+        <line x1="280" y1="0" x2="280" y2="360" data-om-id="497ef2fb:23"></line>
+      </g>
+
+      <!-- Thin horizontal grid lines -->
+      <g stroke="url(#fadeSoft)" stroke-width="1" data-om-id="497ef2fb:24">
+        <line x1="0" y1="60" x2="320" y2="60" data-om-id="497ef2fb:25"></line>
+        <line x1="0" y1="140" x2="320" y2="140" data-om-id="497ef2fb:26"></line>
+        <line x1="0" y1="220" x2="320" y2="220" data-om-id="497ef2fb:27"></line>
+        <line x1="0" y1="300" x2="320" y2="300" data-om-id="497ef2fb:28"></line>
+      </g>
+
+      <!-- Minimal node-connection diagram (faceted N echo) -->
+      <g stroke="url(#fade)" stroke-width="1.25" stroke-linecap="round" data-om-id="497ef2fb:29">
+        <line x1="100" y1="140" x2="160" y2="60" data-om-id="497ef2fb:30"></line>
+        <line x1="160" y1="60" x2="220" y2="140" data-om-id="497ef2fb:31"></line>
+        <line x1="160" y1="60" x2="160" y2="220" data-om-id="497ef2fb:32"></line>
+        <line x1="100" y1="140" x2="220" y2="220" data-om-id="497ef2fb:33"></line>
+        <line x1="220" y1="140" x2="160" y2="220" data-om-id="497ef2fb:34"></line>
+        <line x1="220" y1="140" x2="280" y2="220" data-om-id="497ef2fb:35"></line>
+        <line x1="160" y1="220" x2="220" y2="300" data-om-id="497ef2fb:36"></line>
+      </g>
+
+      <!-- Nodes -->
+      <g data-om-id="497ef2fb:37">
+        <circle cx="100" cy="140" r="2.5" fill="#5cb82f" data-om-id="497ef2fb:38"></circle>
+        <circle cx="160" cy="60" r="3" fill="#8dd638" data-om-id="497ef2fb:39"></circle>
+        <circle cx="220" cy="140" r="2.5" fill="#5cb82f" data-om-id="497ef2fb:40"></circle>
+        <circle cx="160" cy="220" r="3.5" fill="#8dd638" data-om-id="497ef2fb:41"></circle>
+        <circle cx="280" cy="220" r="2" fill="#3a8a25" data-om-id="497ef2fb:42"></circle>
+        <circle cx="220" cy="300" r="2.5" fill="#5cb82f" data-om-id="497ef2fb:43"></circle>
+      </g>
+
+      <!-- Outer ring around hero node -->
+      <circle cx="160" cy="220" r="9" stroke="#8dd638" stroke-opacity="0.35" stroke-width="1" fill="none" data-om-id="497ef2fb:44"></circle>
+      <circle cx="160" cy="220" r="16" stroke="#8dd638" stroke-opacity="0.15" stroke-width="1" fill="none" data-om-id="497ef2fb:45"></circle>
+    </svg>
+
+    <div class="content" data-om-id="497ef2fb:46">
+      <div class="eyebrow" data-om-id="497ef2fb:47">Norberg Webdesign</div>
+      <h1 data-om-id="497ef2fb:48">Profesjonelle nettsider for bedrifter</h1>
+      <p class="sub" data-om-id="497ef2fb:49">
+        <span class="accent" data-om-id="497ef2fb:50">Gratis utkast</span>
+        <span class="sep" data-om-id="497ef2fb:51"></span>
+        ingen betaling før du er fornøyd
+      </p>
+    </div>
+
+    <div class="wordmark" data-om-id="497ef2fb:52">Håndlaget i Norge <span data-om-id="497ef2fb:53">·</span> Est. 2026</div>
+  </div>
+
+  <div class="meta" data-om-id="497ef2fb:54">820 × 360 — Facebook cover (safe zone honored)</div>
+
+
+<script type="application/json" id="__om_srcmap">{"gen":"497ef2fb","entries":[{"id":"497ef2fb:0","tag":"html","openStart":16,"attrEnd":31,"openEnd":32,"closeStart":7139,"closeEnd":7146,"textRuns":[[32,33],[4007,4008],[7138,7139]],"parentId":null,"childIds":["497ef2fb:1","497ef2fb:6"]},{"id":"497ef2fb:1","tag":"head","openStart":33,"attrEnd":38,"openEnd":39,"closeStart":4000,"closeEnd":4007,"textRuns":[[39,40],[64,65],[116,117],[178,179],[249,250],[386,387],[3999,4000]],"parentId":"497ef2fb:0","childIds":["497ef2fb:2","497ef2fb:3","497ef2fb:4","497ef2fb:5"]},{"id":"497ef2fb:2","tag":"meta","openStart":40,"attrEnd":61,"openEnd":64,"closeEnd":64,"textRuns":[],"parentId":"497ef2fb:1","childIds":[]},{"id":"497ef2fb:3","tag":"link","openStart":117,"attrEnd":175,"openEnd":178,"closeEnd":178,"textRuns":[],"parentId":"497ef2fb:1","childIds":[]},{"id":"497ef2fb:4","tag":"link","openStart":179,"attrEnd":246,"openEnd":249,"closeEnd":249,"textRuns":[],"parentId":"497ef2fb:1","childIds":[]},{"id":"497ef2fb:5","tag":"link","openStart":250,"attrEnd":383,"openEnd":386,"closeEnd":386,"textRuns":[],"parentId":"497ef2fb:1","childIds":[]},{"id":"497ef2fb:6","tag":"body","openStart":4008,"attrEnd":4013,"openEnd":4014,"closeStart":7131,"closeEnd":7138,"textRuns":[[4014,4017],[7053,7057],[7130,7131]],"parentId":"497ef2fb:0","childIds":["497ef2fb:7","497ef2fb:54"]},{"id":"497ef2fb:7","tag":"div","openStart":4017,"attrEnd":4046,"openEnd":4047,"closeStart":7047,"closeEnd":7053,"textRuns":[[4047,4052],[4076,4082],[4153,4158],[6664,6670],[6966,6972],[7044,7047]],"parentId":"497ef2fb:6","childIds":["497ef2fb:8","497ef2fb:9","497ef2fb:46","497ef2fb:52"]},{"id":"497ef2fb:8","tag":"div","openStart":4052,"attrEnd":4069,"openEnd":4070,"closeStart":4070,"closeEnd":4076,"textRuns":[],"parentId":"497ef2fb:7","childIds":[]},{"id":"497ef2fb:9","tag":"svg","openStart":4158,"attrEnd":4262,"openEnd":4263,"closeStart":6658,"closeEnd":6664,"textRuns":[[4263,4270],[4826,4834],[4867,4874],[5179,5187],[5222,5229],[5483,5491],[5548,5555],[5995,6003],[6017,6024],[6392,6400],[6436,6443]],"parentId":"497ef2fb:7","childIds":["497ef2fb:10","497ef2fb:18","497ef2fb:24","497ef2fb:29","497ef2fb:37","497ef2fb:44"]},{"id":"497ef2fb:10","tag":"defs","openStart":4270,"attrEnd":4275,"openEnd":4276,"closeStart":4819,"closeEnd":4826,"textRuns":[[4276,4285],[4578,4587],[4812,4819]],"parentId":"497ef2fb:9","childIds":["497ef2fb:11","497ef2fb:15"]},{"id":"497ef2fb:11","tag":"lineargradient","openStart":4285,"attrEnd":4338,"openEnd":4339,"closeStart":4561,"closeEnd":4578,"textRuns":[[4339,4350]],"parentId":"497ef2fb:10","childIds":["497ef2fb:12"]},{"id":"497ef2fb:12","tag":"stop","openStart":4350,"attrEnd":4405,"openEnd":4407,"textRuns":[[4407,4418]],"parentId":"497ef2fb:11","childIds":["497ef2fb:13"]},{"id":"497ef2fb:13","tag":"stop","openStart":4418,"attrEnd":4477,"openEnd":4479,"textRuns":[[4479,4490]],"parentId":"497ef2fb:12","childIds":["497ef2fb:14"]},{"id":"497ef2fb:14","tag":"stop","openStart":4490,"attrEnd":4550,"openEnd":4552,"textRuns":[[4552,4561]],"parentId":"497ef2fb:13","childIds":[]},{"id":"497ef2fb:15","tag":"lineargradient","openStart":4587,"attrEnd":4644,"openEnd":4645,"closeStart":4795,"closeEnd":4812,"textRuns":[[4645,4656]],"parentId":"497ef2fb:10","childIds":["497ef2fb:16"]},{"id":"497ef2fb:16","tag":"stop","openStart":4656,"attrEnd":4711,"openEnd":4713,"textRuns":[[4713,4724]],"parentId":"497ef2fb:15","childIds":["497ef2fb:17"]},{"id":"497ef2fb:17","tag":"stop","openStart":4724,"attrEnd":4784,"openEnd":4786,"textRuns":[[4786,4795]],"parentId":"497ef2fb:16","childIds":[]},{"id":"497ef2fb:18","tag":"g","openStart":4874,"attrEnd":4917,"openEnd":4918,"closeStart":5175,"closeEnd":5179,"textRuns":[[4918,4927]],"parentId":"497ef2fb:9","childIds":["497ef2fb:19"]},{"id":"497ef2fb:19","tag":"line","openStart":4927,"attrEnd":4966,"openEnd":4968,"textRuns":[[4968,4977]],"parentId":"497ef2fb:18","childIds":["497ef2fb:20"]},{"id":"497ef2fb:20","tag":"line","openStart":4977,"attrEnd":5016,"openEnd":5018,"textRuns":[[5018,5027]],"parentId":"497ef2fb:19","childIds":["497ef2fb:21"]},{"id":"497ef2fb:21","tag":"line","openStart":5027,"attrEnd":5066,"openEnd":5068,"textRuns":[[5068,5077]],"parentId":"497ef2fb:20","childIds":["497ef2fb:22"]},{"id":"497ef2fb:22","tag":"line","openStart":5077,"attrEnd":5116,"openEnd":5118,"textRuns":[[5118,5127]],"parentId":"497ef2fb:21","childIds":["497ef2fb:23"]},{"id":"497ef2fb:23","tag":"line","openStart":5127,"attrEnd":5166,"openEnd":5168,"textRuns":[[5168,5175]],"parentId":"497ef2fb:22","childIds":[]},{"id":"497ef2fb:24","tag":"g","openStart":5229,"attrEnd":5272,"openEnd":5273,"closeStart":5479,"closeEnd":5483,"textRuns":[[5273,5282]],"parentId":"497ef2fb:9","childIds":["497ef2fb:25"]},{"id":"497ef2fb:25","tag":"line","openStart":5282,"attrEnd":5320,"openEnd":5322,"textRuns":[[5322,5331]],"parentId":"497ef2fb:24","childIds":["497ef2fb:26"]},{"id":"497ef2fb:26","tag":"line","openStart":5331,"attrEnd":5370,"openEnd":5372,"textRuns":[[5372,5381]],"parentId":"497ef2fb:25","childIds":["497ef2fb:27"]},{"id":"497ef2fb:27","tag":"line","openStart":5381,"attrEnd":5420,"openEnd":5422,"textRuns":[[5422,5431]],"parentId":"497ef2fb:26","childIds":["497ef2fb:28"]},{"id":"497ef2fb:28","tag":"line","openStart":5431,"attrEnd":5470,"openEnd":5472,"textRuns":[[5472,5479]],"parentId":"497ef2fb:27","childIds":[]},{"id":"497ef2fb:29","tag":"g","openStart":5555,"attrEnd":5620,"openEnd":5621,"closeStart":5991,"closeEnd":5995,"textRuns":[[5621,5630]],"parentId":"497ef2fb:9","childIds":["497ef2fb:30"]},{"id":"497ef2fb:30","tag":"line","openStart":5630,"attrEnd":5670,"openEnd":5672,"textRuns":[[5672,5681]],"parentId":"497ef2fb:29","childIds":["497ef2fb:31"]},{"id":"497ef2fb:31","tag":"line","openStart":5681,"attrEnd":5722,"openEnd":5724,"textRuns":[[5724,5733]],"parentId":"497ef2fb:30","childIds":["497ef2fb:32"]},{"id":"497ef2fb:32","tag":"line","openStart":5733,"attrEnd":5774,"openEnd":5776,"textRuns":[[5776,5785]],"parentId":"497ef2fb:31","childIds":["497ef2fb:33"]},{"id":"497ef2fb:33","tag":"line","openStart":5785,"attrEnd":5826,"openEnd":5828,"textRuns":[[5828,5837]],"parentId":"497ef2fb:32","childIds":["497ef2fb:34"]},{"id":"497ef2fb:34","tag":"line","openStart":5837,"attrEnd":5878,"openEnd":5880,"textRuns":[[5880,5889]],"parentId":"497ef2fb:33","childIds":["497ef2fb:35"]},{"id":"497ef2fb:35","tag":"line","openStart":5889,"attrEnd":5930,"openEnd":5932,"textRuns":[[5932,5941]],"parentId":"497ef2fb:34","childIds":["497ef2fb:36"]},{"id":"497ef2fb:36","tag":"line","openStart":5941,"attrEnd":5982,"openEnd":5984,"textRuns":[[5984,5991]],"parentId":"497ef2fb:35","childIds":[]},{"id":"497ef2fb:37","tag":"g","openStart":6024,"attrEnd":6026,"openEnd":6027,"closeStart":6388,"closeEnd":6392,"textRuns":[[6027,6036]],"parentId":"497ef2fb:9","childIds":["497ef2fb:38"]},{"id":"497ef2fb:38","tag":"circle","openStart":6036,"attrEnd":6084,"openEnd":6086,"textRuns":[[6086,6095]],"parentId":"497ef2fb:37","childIds":["497ef2fb:39"]},{"id":"497ef2fb:39","tag":"circle","openStart":6095,"attrEnd":6143,"openEnd":6145,"textRuns":[[6145,6154]],"parentId":"497ef2fb:38","childIds":["497ef2fb:40"]},{"id":"497ef2fb:40","tag":"circle","openStart":6154,"attrEnd":6202,"openEnd":6204,"textRuns":[[6204,6213]],"parentId":"497ef2fb:39","childIds":["497ef2fb:41"]},{"id":"497ef2fb:41","tag":"circle","openStart":6213,"attrEnd":6261,"openEnd":6263,"textRuns":[[6263,6272]],"parentId":"497ef2fb:40","childIds":["497ef2fb:42"]},{"id":"497ef2fb:42","tag":"circle","openStart":6272,"attrEnd":6320,"openEnd":6322,"textRuns":[[6322,6331]],"parentId":"497ef2fb:41","childIds":["497ef2fb:43"]},{"id":"497ef2fb:43","tag":"circle","openStart":6331,"attrEnd":6379,"openEnd":6381,"textRuns":[[6381,6388]],"parentId":"497ef2fb:42","childIds":[]},{"id":"497ef2fb:44","tag":"circle","openStart":6443,"attrEnd":6542,"openEnd":6544,"textRuns":[[6544,6551]],"parentId":"497ef2fb:9","childIds":["497ef2fb:45"]},{"id":"497ef2fb:45","tag":"circle","openStart":6551,"attrEnd":6651,"openEnd":6653,"textRuns":[[6653,6658]],"parentId":"497ef2fb:44","childIds":[]},{"id":"497ef2fb:46","tag":"div","openStart":6670,"attrEnd":6690,"openEnd":6691,"closeStart":6960,"closeEnd":6966,"textRuns":[[6691,6698],[6742,6749],[6795,6802],[6955,6960]],"parentId":"497ef2fb:7","childIds":["497ef2fb:47","497ef2fb:48","497ef2fb:49"]},{"id":"497ef2fb:47","tag":"div","openStart":6698,"attrEnd":6718,"openEnd":6719,"closeStart":6736,"closeEnd":6742,"textRuns":[[6719,6736]],"parentId":"497ef2fb:46","childIds":[]},{"id":"497ef2fb:48","tag":"h1","openStart":6749,"attrEnd":6752,"openEnd":6753,"closeStart":6790,"closeEnd":6795,"textRuns":[[6753,6790]],"parentId":"497ef2fb:46","childIds":[]},{"id":"497ef2fb:49","tag":"p","openStart":6802,"attrEnd":6816,"openEnd":6817,"closeStart":6951,"closeEnd":6955,"textRuns":[[6817,6826],[6867,6876],[6901,6951]],"parentId":"497ef2fb:46","childIds":["497ef2fb:50","497ef2fb:51"]},{"id":"497ef2fb:50","tag":"span","openStart":6826,"attrEnd":6846,"openEnd":6847,"closeStart":6860,"closeEnd":6867,"textRuns":[[6847,6860]],"parentId":"497ef2fb:49","childIds":[]},{"id":"497ef2fb:51","tag":"span","openStart":6876,"attrEnd":6893,"openEnd":6894,"closeStart":6894,"closeEnd":6901,"textRuns":[],"parentId":"497ef2fb:49","childIds":[]},{"id":"497ef2fb:52","tag":"div","openStart":6972,"attrEnd":6993,"openEnd":6994,"closeStart":7038,"closeEnd":7044,"textRuns":[[6994,7013],[7028,7038]],"parentId":"497ef2fb:7","childIds":["497ef2fb:53"]},{"id":"497ef2fb:53","tag":"span","openStart":7013,"attrEnd":7018,"openEnd":7019,"closeStart":7021,"closeEnd":7028,"textRuns":[[7019,7021]],"parentId":"497ef2fb:52","childIds":[]},{"id":"497ef2fb:54","tag":"div","openStart":7057,"attrEnd":7074,"openEnd":7075,"closeStart":7124,"closeEnd":7130,"textRuns":[[7075,7124]],"parentId":"497ef2fb:6","childIds":[]}]}</script></body></html>

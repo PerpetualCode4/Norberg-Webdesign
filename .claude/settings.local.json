@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude plugin:*)",
+      "Read(//c/Users/brage/.claude/plugins/marketplaces/ui-ux-pro-max-skill/**)",
+      "Bash(python src/ui-ux-pro-max/scripts/search.py \"web design agency premium dark minimal luxury\" --design-system -p \"Norberg Webdesign\" -f markdown)",
+      "Bash(npx skills:*)"
+    ]
+  }
+}
