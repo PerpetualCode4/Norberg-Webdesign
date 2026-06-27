@@ -1,0 +1,111 @@
+[33mcommit 072bbbbed01353410611cfc02a194025d5d6a982[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: brage <brage.norberg88@gmail.com>
+Date:   Wed Jun 24 21:16:40 2026 +0200
+
+    Initial commit
+
+ .agents/skills/adapt/SKILL.md                      |   198 [32m+[m
+ .agents/skills/animate/SKILL.md                    |   174 [32m+[m
+ .agents/skills/arrange/SKILL.md                    |   124 [32m+[m
+ .agents/skills/audit/SKILL.md                      |   147 [32m+[m
+ .agents/skills/bolder/SKILL.md                     |   116 [32m+[m
+ .agents/skills/clarify/SKILL.md                    |   182 [32m+[m
+ .agents/skills/colorize/SKILL.md                   |   142 [32m+[m
+ .agents/skills/critique/SKILL.md                   |   224 [32m+[m
+ .../skills/critique/reference/cognitive-load.md    |   106 [32m+[m
+ .../critique/reference/heuristics-scoring.md       |   234 [32m+[m
+ .agents/skills/critique/reference/personas.md      |   178 [32m+[m
+ .agents/skills/delight/SKILL.md                    |   303 [32m+[m
+ .agents/skills/distill/SKILL.md                    |   121 [32m+[m
+ .agents/skills/extract/SKILL.md                    |    91 [32m+[m
+ .agents/skills/harden/SKILL.md                     |   354 [32m+[m
+ .agents/skills/impeccable/SKILL.md                 |   343 [32m+[m
+ .../impeccable/reference/color-and-contrast.md     |   105 [32m+[m
+ .agents/skills/impeccable/reference/craft.md       |    70 [32m+[m
+ .../impeccable/reference/interaction-design.md     |   195 [32m+[m
+ .../skills/impeccable/reference/motion-design.md   |    99 [32m+[m
+ .../impeccable/reference/responsive-design.md      |   114 [32m+[m
+ .../skills/impeccable/reference/spatial-design.md  |   100 [32m+[m
+ .agents/skills/impeccable/reference/typography.md  |   142 [32m+[m
+ .agents/skills/impeccable/reference/ux-writing.md  |   107 [32m+[m
+ .agents/skills/normalize/SKILL.md                  |    70 [32m+[m
+ .agents/skills/onboard/SKILL.md                    |   245 [32m+[m
+ .agents/skills/optimize/SKILL.md                   |   265 [32m+[m
+ .agents/skills/overdrive/SKILL.md                  |   141 [32m+[m
+ .agents/skills/polish/SKILL.md                     |   202 [32m+[m
+ .agents/skills/quieter/SKILL.md                    |   102 [32m+[m
+ .agents/skills/shape/SKILL.md                      |    95 [32m+[m
+ .agents/skills/typeset/SKILL.md                    |   115 [32m+[m
+ .claude/settings.local.json                        |    10 [32m+[m
+ .claude/skills/adapt/SKILL.md                      |   198 [32m+[m
+ .claude/skills/animate/SKILL.md                    |   174 [32m+[m
+ .claude/skills/arrange/SKILL.md                    |   124 [32m+[m
+ .claude/skills/audit/SKILL.md                      |   147 [32m+[m
+ .claude/skills/bolder/SKILL.md                     |   116 [32m+[m
+ .claude/skills/clarify/SKILL.md                    |   182 [32m+[m
+ .claude/skills/colorize/SKILL.md                   |   142 [32m+[m
+ .claude/skills/critique/SKILL.md                   |   224 [32m+[m
+ .../skills/critique/reference/cognitive-load.md    |   106 [32m+[m
+ .../critique/reference/heuristics-scoring.md       |   234 [32m+[m
+ .claude/skills/critique/reference/personas.md      |   178 [32m+[m
+ .claude/skills/delight/SKILL.md                    |   303 [32m+[m
+ .claude/skills/distill/SKILL.md                    |   121 [32m+[m
+ .claude/skills/extract/SKILL.md                    |    91 [32m+[m
+ .claude/skills/harden/SKILL.md                     |   354 [32m+[m
+ .claude/skills/impeccable/SKILL.md                 |   343 [32m+[m
+ .../impeccable/reference/color-and-contrast.md     |   105 [32m+[m
+ .claude/skills/impeccable/reference/craft.md       |    70 [32m+[m
+ .../impeccable/reference/interaction-design.md     |   195 [32m+[m
+ .../skills/impeccable/reference/motion-design.md   |    99 [32m+[m
+ .../impeccable/reference/responsive-design.md      |   114 [32m+[m
+ .../skills/impeccable/reference/spatial-design.md  |   100 [32m+[m
+ .claude/skills/impeccable/reference/typography.md  |   142 [32m+[m
+ .claude/skills/impeccable/reference/ux-writing.md  |   107 [32m+[m
+ .claude/skills/normalize/SKILL.md                  |    70 [32m+[m
+ .claude/skills/onboard/SKILL.md                    |   245 [32m+[m
+ .claude/skills/optimize/SKILL.md                   |   265 [32m+[m
+ .claude/skills/overdrive/SKILL.md                  |   141 [32m+[m
+ .claude/skills/polish/SKILL.md                     |   202 [32m+[m
+ .claude/skills/quieter/SKILL.md                    |   102 [32m+[m
+ .claude/skills/shape/SKILL.md                      |    95 [32m+[m
+ .claude/skills/typeset/SKILL.md                    |   115 [32m+[m
+ .vscode/sftp.json                                  |    10 [32m+[m
+ Bilder Og Video/132793-754897675_small.mp4         |   Bin [31m0[m -> [32m14216165[m bytes
+ .../44290cc7-c2e1-4262-98de-c61be2f7b513.png       |   Bin [31m0[m -> [32m1606262[m bytes
+ .../ChatGPT Image 10. mars 2026, 18_51_33.png      |   Bin [31m0[m -> [32m672267[m bytes
+ .../ChatGPT Image 10. mars 2026, 19_01_01.png      |   Bin [31m0[m -> [32m1606262[m bytes
+ .../ChatGPT Image 10. mars 2026, 19_08_34.png      |   Bin [31m0[m -> [32m1611637[m bytes
+ Bilder Og Video/Facebook Cover v2.png              |   Bin [31m0[m -> [32m44881[m bytes
+ Bilder Og Video/Facebook Cover.png                 |   Bin [31m0[m -> [32m14021[m bytes
+ .../Facebook design_files/Facebook Cover.htm       |   253 [32m+[m
+ .../Facebook design_files/Facebook%20Cover_002.htm |   253 [32m+[m
+ .../Facebook%20Cover_data_002/css2.css             |   117 [32m+[m
+ Bilder Og Video/Facebook design_files/a.htm        |     2 [32m+[m
+ .../Facebook design_files/a_data/main.js           |     1 [32m+[m
+ .../Facebook design_files/index-BFU6eZJE.js        | 11356 [32m+++++++++++++++++++[m
+ .../Facebook design_files/index-BadHA-b0.css       |     1 [32m+[m
+ Bilder Og Video/Figtree,Syne.zip                   |   Bin [31m0[m -> [32m1199933[m bytes
+ .../Figtree/Figtree-Italic-VariableFont_wght.ttf   |   Bin [31m0[m -> [32m62292[m bytes
+ .../Figtree/Figtree-VariableFont_wght.ttf          |   Bin [31m0[m -> [32m62412[m bytes
+ Bilder Og Video/Figtree,Syne/Figtree/OFL.txt       |    93 [32m+[m
+ Bilder Og Video/Figtree,Syne/Figtree/README.txt    |    77 [32m+[m
+ .../Figtree,Syne/Figtree/static/Figtree-Black.ttf  |   Bin [31m0[m -> [32m40276[m bytes
+ .../Figtree/static/Figtree-BlackItalic.ttf         |   Bin [31m0[m -> [32m40872[m bytes
+ .../Figtree,Syne/Figtree/static/Figtree-Bold.ttf   |   Bin [31m0[m -> [32m40324[m bytes
+ .../Figtree/static/Figtree-BoldItalic.ttf          |   Bin [31m0[m -> [32m40928[m bytes
+ .../Figtree/static/Figtree-ExtraBold.ttf           |   Bin [31m0[m -> [32m40344[m bytes
+ .../Figtree/static/Figtree-ExtraBoldItalic.ttf     |   Bin [31m0[m -> [32m40980[m bytes
+ .../Figtree,Syne/Figtree/static/Figtree-Italic.ttf |   Bin [31m0[m -> [32m40636[m bytes
+ .../Figtree,Syne/Figtree/static/Figtree-Light.ttf  |   Bin [31m0[m -> [32m39988[m bytes
+ .../Figtree/static/Figtree-LightItalic.ttf         |   Bin [31m0[m -> [32m40552[m bytes
+ .../Figtree,Syne/Figtree/static/Figtree-Medium.ttf |   Bin [31m0[m -> [32m40148[m bytes
+ .../Figtree/static/Figtree-MediumItalic.ttf        |   Bin [31m0[m -> [32m40720[m bytes
+ .../Figtree/static/Figtree-Regular.ttf             |   Bin [31m0[m -> [32m40140[m bytes
+ .../Figtree/static/Figtree-SemiBold.ttf            |   Bin [31m0[m -> [32m40360[m bytes
+ .../Figtree/static/Figtree-SemiBoldItalic.ttf      |   Bin [31m0[m -> [32m40984[m bytes
+ Bilder Og Video/Figtree,Syne/Syne/OFL.txt          |    93 [32m+[m
+ Bilder Og Video/Figtree,Syne/Syne/README.txt       |    67 [32m+[m
+ .../Figtree,Syne/Syne/Syne-VariableFont_wght.ttf   |   Bin [31m0[m -> [32m145260[m bytes
+ .../Figtree,Syne/Syne/static/Syne-Bold.ttf         |   Bin [31m0[m -> [32m69172[m bytes
+ .../Figtree,Syne/Syne/static/Syne-ExtraBold.ttf    |   Bin [31m0[m -> [32m69252[m bytes
+ .../Figtree
