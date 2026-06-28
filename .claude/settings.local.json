@@ -4,7 +4,13 @@
       "Bash(claude plugin:*)",
       "Read(//c/Users/brage/.claude/plugins/marketplaces/ui-ux-pro-max-skill/**)",
       "Bash(python src/ui-ux-pro-max/scripts/search.py \"web design agency premium dark minimal luxury\" --design-system -p \"Norberg Webdesign\" -f markdown)",
-      "Bash(npx skills:*)"
+      "Bash(npx skills:*)",
+      "Bash(python3 -c \"print\\(repr\\('nigardsbreen-camping.png'\\)\\)\")",
+      "WebFetch(domain:norbergwebdesign.no)",
+      "Bash(git fetch *)",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(git status *)"
     ]
   }
 }
