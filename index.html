@@ -536,7 +536,11 @@ nav.dn a:hover::after{width:100%}
 .k-wrap .bt{margin-bottom:42px}
 .k-btns{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
 .k-btns .btn{width:100%;font-size:17px;padding:20px 28px;border-radius:14px}
-.k-pref a{color:var(--g);text-decoration:underline;text-underline-offset:3px}
+.k-soc{display:flex;justify-content:center;gap:14px;margin:8px 0 42px}
+.soc{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border-g);color:var(--g);transition:transform .25s var(--ease),background .25s,color .25s}
+.soc:hover{transform:translateY(-3px);background:var(--g);color:#0a1a0e}
+.ft-links .soc-s{width:36px;height:36px;color:var(--g)}
+.ft-links{align-items:center}
 .k-pref{font-size:13px;color:var(--faint);letter-spacing:.05em;margin-bottom:42px;display:flex;align-items:center;justify-content:center;gap:6px}
 .k-info{display:flex;flex-direction:column;gap:16px;padding-top:36px;border-top:1px solid var(--border)}
 .kd{display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;color:var(--dim)}
@@ -972,7 +976,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
           Send e-post
         </a>
       </div>
-      <p class="k-pref reveal rd3">Følg arbeidet mitt på <a href="https://www.instagram.com/norbergwebdesign/" target="_blank" rel="noopener noreferrer">Instagram</a> og <a href="https://www.facebook.com/norbergwebdesign" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+      <div class="k-soc reveal rd3"><a href="https://www.instagram.com/norbergwebdesign/" class="soc" target="_blank" rel="noopener noreferrer" aria-label="Instagram (åpnes i ny fane)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a><a href="https://www.facebook.com/norbergwebdesign" class="soc" target="_blank" rel="noopener noreferrer" aria-label="Facebook (åpnes i ny fane)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
       <div class="k-info reveal rd4">
         <div class="kd"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><a href="sms:+4748498627">+47 484 98 627</a></div>
         <div class="kd"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:norbergwebdesign@gmail.com">norbergwebdesign@gmail.com</a></div>
@@ -992,8 +996,8 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
     </div>
     <div class="ft-txt">© 2026 Norberg Webdesign · Org.nr 837 471 532</div>
     <div class="ft-links">
-      <a href="https://www.instagram.com/norbergwebdesign/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.facebook.com/norbergwebdesign" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/norbergwebdesign/" class="soc soc-s" target="_blank" rel="noopener noreferrer" aria-label="Instagram (åpnes i ny fane)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+      <a href="https://www.facebook.com/norbergwebdesign" class="soc soc-s" target="_blank" rel="noopener noreferrer" aria-label="Facebook (åpnes i ny fane)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       <a href="mailto:norbergwebdesign@gmail.com">E-post</a>
       <a href="sms:+4748498627">SMS</a>
     </div>
