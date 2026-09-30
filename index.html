@@ -323,6 +323,19 @@ nav.dn a:hover::after{width:100%}
 .ps-t{font-size:14px;font-weight:600;color:var(--light);margin-bottom:3px}
 .ps-d{font-size:13px;color:#eef6ef;line-height:1.68}
 
+/* ENHEITS-MOCKUP */
+.pj-shot.pj-dev{position:relative;display:flex;align-items:center;justify-content:flex-start;padding:7% 0 9% 7%;background:radial-gradient(110% 90% at 25% 15%,rgba(92,184,92,.16),transparent 60%),var(--bg2)}
+.pj-dev img{transition:none;transform:none!important}
+.pj-card:hover .pj-dev img{transform:none!important}
+.dv-lap{position:relative;width:78%;transition:transform .5s var(--ease)}
+.dv-scr{aspect-ratio:16/10;background:#0b0f0c;border:5px solid #1d231e;border-bottom-width:7px;border-radius:9px 9px 0 0;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.pj-dev .dv-scr img{width:100%;height:100%;object-fit:cover;object-position:top}
+.dv-base{height:8px;margin:0 -6%;background:linear-gradient(#323a33,#161a17);border-radius:0 0 10px 10px;position:relative}
+.dv-base::after{content:'';position:absolute;left:43%;right:43%;top:0;height:3px;background:#0c0f0d;border-radius:0 0 4px 4px}
+.dv-ph{position:absolute;right:6%;bottom:7%;width:22%;aspect-ratio:9/19;background:#0b0f0c;border:4px solid #1d231e;border-radius:14px;overflow:hidden;box-shadow:0 18px 36px rgba(0,0,0,.55);transition:transform .5s var(--ease)}
+.pj-dev .dv-ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.pj-card:hover .dv-lap{transform:translateY(-4px)}
+.pj-card:hover .dv-ph{transform:translateY(-10px)}
 /* PROSJEKTER */
 #prosjekter{background:var(--bg3);padding:104px 0;overflow-x:clip}
 .pj-head{text-align:center;margin-bottom:48px}
@@ -815,8 +828,9 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
     </div>
     <div class="pj-grid">
       <a href="https://www.havnenmaskin.no" target="_blank" rel="noopener noreferrer" class="pj-card reveal-left" aria-label="Se Havnen Maskin (åpnes i ny fane)">
-        <div class="pj-shot">
-          <img src="Bilder%20Og%20Video/havnen-maskin.webp" alt="Skjermbilde av Havnen Maskin" loading="lazy" decoding="async" style="object-position:left center"/>
+        <div class="pj-shot pj-dev">
+          <div class="dv-lap"><div class="dv-scr"><img src="Bilder%20Og%20Video/prosjekt/havnen-maskin-pc.jpg" alt="Havnen Maskin på PC" loading="lazy" decoding="async"/></div><div class="dv-base"></div></div>
+          <div class="dv-ph"><img src="Bilder%20Og%20Video/prosjekt/havnen-maskin-mob.jpg" alt="Havnen Maskin på mobil" loading="lazy" decoding="async"/></div>
         </div>
         <div class="pj-body">
           <div class="pj-name">Havnen Maskin</div>
@@ -825,8 +839,9 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
         </div>
       </a>
       <a href="https://havnenmusikk.no" target="_blank" rel="noopener noreferrer" class="pj-card reveal-right" aria-label="Se Havnen musikk (åpnes i ny fane)">
-        <div class="pj-shot">
-          <img src="Bilder%20Og%20Video/havnen-musikk.webp" alt="Skjermbilde av heimesida til Havnen" loading="lazy" decoding="async" style="object-position:left center"/>
+        <div class="pj-shot pj-dev">
+          <div class="dv-lap"><div class="dv-scr"><img src="Bilder%20Og%20Video/prosjekt/havnen-musikk-pc.jpg" alt="Havnen på PC" loading="lazy" decoding="async"/></div><div class="dv-base"></div></div>
+          <div class="dv-ph"><img src="Bilder%20Og%20Video/prosjekt/havnen-musikk-mob.jpg" alt="Havnen på mobil" loading="lazy" decoding="async"/></div>
         </div>
         <div class="pj-body">
           <div class="pj-name">Havnen</div>
@@ -835,8 +850,9 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
         </div>
       </a>
       <a href="https://nigardsbreencamping.no" target="_blank" rel="noopener noreferrer" class="pj-card reveal-left" aria-label="Se Nigardsbreen Camping (åpnes i ny fane)">
-        <div class="pj-shot">
-          <img src="Bilder Og Video/Nigardsbreen-Camping.png" alt="Skjermbilde av Nigardsbreen Camping" loading="lazy" decoding="async"/>
+        <div class="pj-shot pj-dev">
+          <div class="dv-lap"><div class="dv-scr"><img src="Bilder%20Og%20Video/prosjekt/nigardsbreen-pc.jpg" alt="Nigardsbreen Camping på PC" loading="lazy" decoding="async"/></div><div class="dv-base"></div></div>
+          <div class="dv-ph"><img src="Bilder%20Og%20Video/prosjekt/nigardsbreen-mob.jpg" alt="Nigardsbreen Camping på mobil" loading="lazy" decoding="async"/></div>
         </div>
         <div class="pj-body">
           <div class="pj-name">Nigardsbreen Camping</div>
@@ -845,8 +861,9 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
         </div>
       </a>
       <a href="https://skathelle.no" target="_blank" rel="noopener noreferrer" class="pj-card reveal-right" aria-label="Se Skathelle.no (åpnes i ny fane)">
-        <div class="pj-shot">
-          <img src="Bilder%20Og%20Video/skathelle.png" alt="Skjermbilde av Skathelle.no" loading="lazy" decoding="async"/>
+        <div class="pj-shot pj-dev">
+          <div class="dv-lap"><div class="dv-scr"><img src="Bilder%20Og%20Video/prosjekt/skathelle-pc.jpg" alt="Skathelle.no på PC" loading="lazy" decoding="async"/></div><div class="dv-base"></div></div>
+          <div class="dv-ph"><img src="Bilder%20Og%20Video/prosjekt/skathelle-mob.jpg" alt="Skathelle.no på mobil" loading="lazy" decoding="async"/></div>
         </div>
         <div class="pj-body">
           <div class="pj-name">Skathelle.no</div>
