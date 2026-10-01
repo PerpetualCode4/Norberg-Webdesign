@@ -8,7 +8,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Nettside, logo og sosiale medium for bedrifter i Sogn | Norberg Webdesign</title>
-<meta name="description" content="Nettside, nettbutikk, logo og reklame på sosiale medium for lokale bedrifter i Sogn og Vestland. Du ser utkastet før du betalar."/>
+<meta name="description" content="Nettside, Google-profil, logo og reklame på sosiale medium for lokale bedrifter i Sogn og Vestland. Du ser utkastet før du betalar."/>
 <link rel="canonical" href="https://norbergwebdesign.no" />
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -154,7 +154,7 @@ nav.dn a:hover::after{width:100%}
 .mm-b{display:flex;flex-direction:column;align-items:stretch;gap:12px;width:100%;max-width:320px;margin-top:22px}
 
 /* HERO */
-#hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:var(--hh);overflow:hidden}
+#hero{position:relative;min-height:88svh;display:flex;align-items:center;padding-top:var(--hh);overflow:hidden}
 
 .hv{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hv video{width:100%;height:100%;object-fit:cover;display:block;backface-visibility:hidden;will-change:transform;animation:kbZ 22s ease-in-out infinite alternate;transform-origin:center center}
@@ -341,6 +341,17 @@ nav.dn a:hover::after{width:100%}
   .dv-lap{display:none}
   .dv-ph{position:relative;right:auto;bottom:auto;width:min(58%,220px);border-width:5px;border-radius:24px}
 }
+@media(max-width:640px){.hero-inner{padding-top:56px}}
+/* EG SKJØNNER DET */
+#forstar{background:#071209;padding:clamp(80px,11vw,120px) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.es-head{max-width:680px}
+.es-head .bt+.bt{margin-top:14px}
+.es-head .bt:last-child{color:var(--g);font-weight:600}
+.es-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:44px}
+.es-c{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:26px 24px}
+.es-q{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--light);margin-bottom:8px;letter-spacing:-.01em}
+.es-a{font-size:15px;line-height:1.7;color:#eef6ef}
+@media(min-width:760px){.es-grid{grid-template-columns:repeat(3,1fr)}}
 /* PROSJEKTER */
 #prosjekter{background:var(--bg3);padding:104px 0;overflow-x:clip}
 .pj-head{text-align:center;margin-bottom:48px}
@@ -737,18 +748,13 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
   <div class="orb orb2" aria-hidden="true"></div>
 
   <div class="hero-inner">
-    <div class="hero-logo-wrap">
-      <img src="Bilder Og Video/norberg_logo_final.png" alt="Norberg Webdesign" loading="eager" decoding="async"
-        onerror="this.style.display='none'"/>
-    </div>
 
     <h1 class="htitle">
-      <span class="w">Du er god</span><br>
-      <span class="w">på jobben din.</span><br>
-      <span class="w acc">No skal folk sjå&nbsp;det.</span>
+      <span class="w">Du har nok å&nbsp;gjere.</span><br>
+      <span class="w acc">Eg tek det&nbsp;digitale.</span>
     </h1>
 
-    <p class="hsub">Nettside, nettbutikk, logo og reklame på sosiale medium. Alt frå éin stad, for lokale bedrifter i Sogn.</p>
+    <p class="hsub">Nettside, Google-profil, logo og reklame for lokale bedrifter i Sogn. Du driv bedrifta. Eg sørgjer for at folk finn henne.</p>
 
     <div class="hbtns">
       <a href="sms:+4748498627" class="btn btn-g">
@@ -764,21 +770,6 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
     <p class="hn">Gratis utkast. Du betalar først når du er nøgd.</p>
   </div>
 
-  <!-- Forest spore particles -->
-  <div aria-hidden="true">
-    <div class="particle" style="left:6%;bottom:18%;--dur:12s;--delay:0s;--dx:-10px;--dy:-230px;--sx:8px;--size:2px;--op:.44;--glow:8px"></div>
-    <div class="particle" style="left:14%;bottom:28%;--dur:9s;--delay:3.2s;--dx:14px;--dy:-200px;--sx:-6px;--size:3px;--op:.34;--glow:11px"></div>
-    <div class="particle" style="left:22%;bottom:14%;--dur:14s;--delay:1.0s;--dx:-18px;--dy:-260px;--sx:10px;--size:2px;--op:.38;--glow:7px"></div>
-    <div class="particle" style="left:31%;bottom:24%;--dur:10s;--delay:5.5s;--dx:10px;--dy:-190px;--sx:-8px;--size:2px;--op:.28;--glow:6px"></div>
-    <div class="particle" style="left:40%;bottom:32%;--dur:8s;--delay:0.7s;--dx:-12px;--dy:-175px;--sx:7px;--size:3px;--op:.40;--glow:12px"></div>
-    <div class="particle" style="left:50%;bottom:16%;--dur:13s;--delay:2.2s;--dx:16px;--dy:-240px;--sx:-9px;--size:2px;--op:.30;--glow:7px"></div>
-    <div class="particle" style="left:59%;bottom:26%;--dur:11s;--delay:6.8s;--dx:-8px;--dy:-210px;--sx:6px;--size:2px;--op:.36;--glow:8px"></div>
-    <div class="particle" style="left:68%;bottom:20%;--dur:9s;--delay:1.8s;--dx:12px;--dy:-185px;--sx:-7px;--size:3px;--op:.32;--glow:10px"></div>
-    <div class="particle" style="left:77%;bottom:30%;--dur:15s;--delay:4.0s;--dx:-14px;--dy:-250px;--sx:9px;--size:2px;--op:.26;--glow:6px"></div>
-    <div class="particle" style="left:85%;bottom:22%;--dur:10s;--delay:0.4s;--dx:8px;--dy:-195px;--sx:-6px;--size:2px;--op:.38;--glow:8px"></div>
-    <div class="particle" style="left:92%;bottom:14%;--dur:12s;--delay:7.5s;--dx:-10px;--dy:-220px;--sx:5px;--size:3px;--op:.30;--glow:10px"></div>
-  </div>
-
   <div class="scroll-hint" aria-hidden="true">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     Scroll
@@ -786,15 +777,18 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
 </section>
 
 
-<section id="google-hook" style="background:#071209;padding:80px 0;border-top:1px solid rgba(238,246,239,.06);border-bottom:1px solid rgba(238,246,239,.06)">
+<section id="forstar">
   <div class="W">
-    <div style="max-width:640px;margin:0 auto;text-align:center">
-      <p style="font-family:'Fraunces',serif;font-size:clamp(22px,4vw,34px);color:#eef6ef;line-height:1.4;margin-bottom:20px">
-        "Når folk googlar <em style="color:#5cb85c;font-style:normal">«frisør Sogndal»</em> eller <em style="color:#5cb85c;font-style:normal">«røyrleggar Leikanger»</em> vel dei ein av dei bedriftene som dukkar opp. Ikkje deg."
-      </p>
-      <p style="font-size:16px;color:#eef6ef;line-height:1.75">
-        Eg sørgjer for at det er deg dei finn. Og at det dei finn, ser bra ut.
-      </p>
+    <div class="es-head reveal">
+      <span class="ew">Eg skjønner det</span>
+      <h2 class="tt">Marknadsføring hamnar nedst på lista.<br><em>Det er ikkje rart.</em></h2>
+      <p class="bt">Dagane dine går til kundar, oppdrag og alt anna som må gjerast. Nettside og Facebook-innlegg blir skuva på, veke etter veke. Det er ikkje latskap. Det er prioritering, og du prioriterer rett: jobben din kjem først.</p>
+      <p class="bt">Difor gjer eg det for deg.</p>
+    </div>
+    <div class="es-grid">
+      <div class="es-c reveal"><div class="es-q">Det tek tid.</div><div class="es-a">Du sender éin SMS. Timane er min jobb.</div></div>
+      <div class="es-c reveal rd1"><div class="es-q">Det er ork.</div><div class="es-a">Eg skriv teksten, hentar bileta og ordnar alt det tekniske.</div></div>
+      <div class="es-c reveal rd2"><div class="es-q">Ein veit ikkje kva som fungerer.</div><div class="es-a">Eg seier rett ut kva som er verdt pengane, og kva som ikkje er det.</div></div>
     </div>
   </div>
 </section>
@@ -808,7 +802,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
       <div class="reveal-left">
         <span class="ew">Om meg</span>
         <h2 class="tt">Éin person.<br><em>Heile den digitale biten.</em></h2>
-        <p class="bt">Eg heiter Brage Norberg og hjelper lokale bedrifter med det dei treng på nett: nettside, nettbutikk, logo og reklame på sosiale medium. Kundane mine er anleggsfirma, campingplassar, artistar og andre som er gode på det dei gjer, men som treng hjelp til å bli sett.</p>
+        <p class="bt">Eg heiter Brage Norberg og hjelper lokale bedrifter med det dei treng på nett: nettside, oppsett av nettbutikk, logo og reklame på sosiale medium. Kundane mine er anleggsfirma, campingplassar, artistar og andre som er gode på det dei gjer, men som treng hjelp til å bli sett.</p>
         <p class="bt">Eg bur i Jostedalen og kjenner bedriftene her. Du har éin person å snakke med, som kjenner bedrifta di. Ikkje eit kundesenter.</p>
         <p class="bt">Dette er for bedrifter som har lite eller ingenting på nett i dag, og vil få det på plass utan at det tek masse tid.</p>
         <div class="chips">
@@ -892,7 +886,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
   <div class="W">
     <div class="t-head reveal">
       <span class="ew ewc">Tenester</span>
-      <h2 class="tt">Alt på éin stad.<br><em>Frå logo til nettbutikk.</em></h2>
+      <h2 class="tt">Alt på éin stad.<br><em>Frå logo til Google.</em></h2>
       <p class="bt" style="max-width:460px;margin-inline:auto">Du slepp å ha éin til nettsida, ein annan til logoen og ein tredje til Facebook.</p>
     </div>
     <div class="t-grid">
@@ -902,7 +896,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
       </div>
       <div class="tc reveal rd1">
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <div><div class="tc-name">Nettbutikk</div><div class="tc-desc">Sel produkta dine direkte frå nettsida. Eg set opp butikken og legg inn produkta.</div></div>
+        <div><div class="tc-name">Oppsett av nettbutikk</div><div class="tc-desc">Eg set opp nettbutikken din, legg inn produkta og koplar han til nettsida.</div></div>
       </div>
       <div class="tc reveal rd2">
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
@@ -975,7 +969,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
       <div class="fqi"><div class="fqq">Kor lang tid tek det?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Eg jobbar raskt. Ofte kan du sjå eit ferdig utkast same dag eller innan få dagar. Når du godkjenner er nettsida på nett kort tid etter.</div></div></div>
       <div class="fqi"><div class="fqq">Treng eg å kjøpe domene sjølv?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Nei, du treng ikkje gjere noko. Domene, hosting og alt teknisk er inkludert. Eg ordnar det for deg.</div></div></div>
       <div class="fqi"><div class="fqq">Kan eg få endra innhaldet etterpå?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Ja. Send meg ein SMS eller e-post med kva du vil endre, så ordnar eg det. Mindre endringar som telefonnummer og opningstider er inkludert. Større endringar vert avtalte og fakturert separat.</div></div></div>
-      <div class="fqi"><div class="fqq">Kan du lage nettbutikk?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Ja. Eg set opp butikken, legg inn produkta og koplar han til nettsida di. Sjå Havnen under prosjekt for eit døme.</div></div></div>
+      <div class="fqi"><div class="fqq">Kan du setje opp nettbutikk?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Ja. Eg set opp butikken, legg inn produkta og koplar han til nettsida di. Sjå Havnen under prosjekt for eit døme.</div></div></div>
       <div class="fqi"><div class="fqq">Lagar du reklame til sosiale medium?<span class="fqico">+</span></div><div class="fqa"><div class="fqa-inner">Ja. Eg lagar annonsar og innlegg til Facebook og Instagram i same stil som resten av bedrifta di. Me avtalar kor mykje og kor ofte.</div></div></div>
     </div>
   </div>
