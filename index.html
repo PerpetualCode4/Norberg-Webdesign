@@ -342,24 +342,35 @@ nav.dn a:hover::after{width:100%}
   .dv-ph{position:relative;right:auto;bottom:auto;width:min(58%,220px);border-width:5px;border-radius:24px}
 }
 @media(max-width:640px){.hero-inner{padding-top:56px}}
-/* TENESTER: WOBBLY KORT */
-.t-grid{display:grid!important;grid-template-columns:1fr!important;gap:20px!important;padding:10px 4px}
+/* TENESTER: WOBBLY KORT MED RANKER */
+.t-grid{display:grid!important;grid-template-columns:1fr!important;gap:26px!important;padding:24px 10px}
 @media(min-width:700px){.t-grid{grid-template-columns:1fr 1fr!important}}
-@media(min-width:1000px){.t-grid{grid-template-columns:repeat(3,1fr)!important}}
-#tjenester .t-grid .tc{background:var(--c)!important;border:0!important;border-radius:30px 16px 34px 14px/18px 32px 16px 30px!important;padding:30px 26px;transform:rotate(var(--r));box-shadow:0 12px 30px rgba(0,0,0,.28);transition:transform .6s cubic-bezier(.34,1.56,.64,1),box-shadow .4s}
+@media(min-width:1000px){.t-grid{grid-template-columns:repeat(3,1fr)!important;gap:30px!important}}
+#tjenester .t-grid .tc{position:relative;background:radial-gradient(120% 100% at 0% 0%,rgba(143,209,138,.13),transparent 60%),var(--c)!important;border:1px solid rgba(143,209,138,.16)!important;border-radius:30px 16px 34px 14px/18px 32px 16px 30px!important;padding:30px 26px;transform:rotate(var(--r));box-shadow:0 14px 34px rgba(0,0,0,.35);transition:transform .6s cubic-bezier(.34,1.56,.64,1),box-shadow .4s}
 #tjenester .t-grid .tc:nth-child(even){border-radius:16px 34px 14px 30px/30px 16px 32px 18px!important}
-#tjenester .t-grid .tc:nth-child(1){--c:#d3e8c8;--r:-1.2deg}
-#tjenester .t-grid .tc:nth-child(2){--c:#f3e3c3;--r:.9deg}
-#tjenester .t-grid .tc:nth-child(3){--c:#cfe4ec;--r:-.6deg}
-#tjenester .t-grid .tc:nth-child(4){--c:#e6d7ec;--r:1.1deg}
-#tjenester .t-grid .tc:nth-child(5){--c:#f6d3bd;--r:-.9deg}
-#tjenester .t-grid .tc:nth-child(6){--c:#dfe6c4;--r:.7deg}
-#tjenester .t-grid .tc:hover{transform:rotate(0deg) translateY(-6px) scale(1.02);box-shadow:0 20px 44px rgba(0,0,0,.38)}
-.t-grid .tc .tc-name{color:#0a1a0e;font-size:18px}
-.t-grid .tc .tc-desc{color:#1d2b20;font-size:14.5px}
-.t-grid .tc .tc-ico{background:rgba(10,26,14,.09);color:#0a1a0e}
-.t-grid .tc:hover .tc-ico{background:rgba(10,26,14,.14)}
-@media(prefers-reduced-motion:reduce){#tjenester .t-grid .tc{transform:none!important;transition:none}}
+#tjenester .t-grid .tc:nth-child(1){--c:#1d3b25;--r:-1.2deg}
+#tjenester .t-grid .tc:nth-child(2){--c:#283a1f;--r:.9deg}
+#tjenester .t-grid .tc:nth-child(3){--c:#1a3631;--r:-.6deg}
+#tjenester .t-grid .tc:nth-child(4){--c:#2a3527;--r:1.1deg}
+#tjenester .t-grid .tc:nth-child(5){--c:#2f3620;--r:-.9deg}
+#tjenester .t-grid .tc:nth-child(6){--c:#1f392b;--r:.7deg}
+#tjenester .t-grid .tc:hover{transform:rotate(0deg) translateY(-6px) scale(1.02);box-shadow:0 22px 46px rgba(0,0,0,.45)}
+.t-grid .tc .tc-name{color:#eef6ef;font-size:18px;position:relative}
+.t-grid .tc .tc-desc{color:rgba(238,246,239,.86);font-size:14.5px;position:relative}
+.t-grid .tc .tc-ico{background:rgba(143,209,138,.14);color:#8fd18a;position:relative}
+/* rankene */
+.vine{position:absolute;top:-22px;right:-16px;width:96px;height:160px;pointer-events:none;overflow:visible;z-index:1}
+#tjenester .t-grid .tc:nth-child(even) .vine{right:auto;left:-16px;transform:scaleX(-1)}
+#tjenester .t-grid .tc:nth-child(3n) .vine{top:auto;bottom:-26px;transform:scaleY(-1)}
+.vn{fill:none;stroke:#5f9e57;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.23,1,.32,1) .2s}
+.vn2{stroke-width:1.8;transition-delay:.9s}
+.lf{fill:#5cb85c;transform-box:fill-box;transform-origin:0 50%;transform:scale(0);transition:transform .55s cubic-bezier(.34,1.56,.64,1) var(--d)}
+.vine g:nth-of-type(odd) .lf{fill:#8fd18a}
+.tc.v .vn{stroke-dashoffset:0}
+.tc.v .lf{transform:scale(1)}
+#tjenester .t-grid .tc:hover .lf{transform:scale(1.15) rotate(8deg)}
+@media(max-width:640px){.vine{width:76px;height:126px}}
+@media(prefers-reduced-motion:reduce){#tjenester .t-grid .tc{transform:none!important;transition:none}.vn{stroke-dashoffset:0;transition:none}.lf{transform:scale(1);transition:none}}
 /* EG SKJØNNER DET */
 #forstar{background:#071209;padding:clamp(80px,11vw,120px) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .es-head{max-width:680px}
@@ -904,26 +915,32 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
     </div>
     <div class="t-grid">
       <div class="tc reveal">
+        <svg class="vine" viewBox="0 0 120 200" aria-hidden="true"><path class="vn" pathLength="1" d="M6-4C26 22 58 8 80 30S106 72 98 102S84 152 100 198"/><path class="vn vn2" pathLength="1" d="M80 30C70 44 74 58 64 70"/><path class="vn vn2" pathLength="1" d="M98 102c9 3 11 14 3 17c-6 2-8-6-2-7"/><g transform="translate(28 14) rotate(-25)"><path class="lf" style="--d:0.5s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(58 16) rotate(25)"><path class="lf" style="--d:0.65s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(84 40) rotate(65)"><path class="lf" style="--d:0.8s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(99 78) rotate(100)"><path class="lf" style="--d:0.95s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(64 68) rotate(150)"><path class="lf" style="--d:1.0s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(93 118) rotate(70)"><path class="lf" style="--d:1.1s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(97 160) rotate(105)"><path class="lf" style="--d:1.25s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g></svg>
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div>
         <div><div class="tc-name">Nettside</div><div class="tc-desc">Laga frå botn av for bedrifta di. Rask, mobilvennleg og enkel å finne fram i.</div></div>
       </div>
       <div class="tc reveal rd1">
+        <svg class="vine" viewBox="0 0 120 200" aria-hidden="true"><path class="vn" pathLength="1" d="M6-4C26 22 58 8 80 30S106 72 98 102S84 152 100 198"/><path class="vn vn2" pathLength="1" d="M80 30C70 44 74 58 64 70"/><path class="vn vn2" pathLength="1" d="M98 102c9 3 11 14 3 17c-6 2-8-6-2-7"/><g transform="translate(28 14) rotate(-25)"><path class="lf" style="--d:0.5s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(58 16) rotate(25)"><path class="lf" style="--d:0.65s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(84 40) rotate(65)"><path class="lf" style="--d:0.8s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(99 78) rotate(100)"><path class="lf" style="--d:0.95s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(64 68) rotate(150)"><path class="lf" style="--d:1.0s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(93 118) rotate(70)"><path class="lf" style="--d:1.1s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(97 160) rotate(105)"><path class="lf" style="--d:1.25s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g></svg>
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
         <div><div class="tc-name">Oppsett av nettbutikk</div><div class="tc-desc">Eg set opp nettbutikken din, legg inn produkta og koplar han til nettsida.</div></div>
       </div>
       <div class="tc reveal rd2">
+        <svg class="vine" viewBox="0 0 120 200" aria-hidden="true"><path class="vn" pathLength="1" d="M6-4C26 22 58 8 80 30S106 72 98 102S84 152 100 198"/><path class="vn vn2" pathLength="1" d="M80 30C70 44 74 58 64 70"/><path class="vn vn2" pathLength="1" d="M98 102c9 3 11 14 3 17c-6 2-8-6-2-7"/><g transform="translate(28 14) rotate(-25)"><path class="lf" style="--d:0.5s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(58 16) rotate(25)"><path class="lf" style="--d:0.65s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(84 40) rotate(65)"><path class="lf" style="--d:0.8s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(99 78) rotate(100)"><path class="lf" style="--d:0.95s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(64 68) rotate(150)"><path class="lf" style="--d:1.0s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(93 118) rotate(70)"><path class="lf" style="--d:1.1s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(97 160) rotate(105)"><path class="lf" style="--d:1.25s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g></svg>
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
         <div><div class="tc-name">Logo og profil</div><div class="tc-desc">Logo, fargar og fontar som passar bedrifta, klare til bruk på nett, skilt og bil.</div></div>
       </div>
       <div class="tc reveal">
+        <svg class="vine" viewBox="0 0 120 200" aria-hidden="true"><path class="vn" pathLength="1" d="M6-4C26 22 58 8 80 30S106 72 98 102S84 152 100 198"/><path class="vn vn2" pathLength="1" d="M80 30C70 44 74 58 64 70"/><path class="vn vn2" pathLength="1" d="M98 102c9 3 11 14 3 17c-6 2-8-6-2-7"/><g transform="translate(28 14) rotate(-25)"><path class="lf" style="--d:0.5s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(58 16) rotate(25)"><path class="lf" style="--d:0.65s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(84 40) rotate(65)"><path class="lf" style="--d:0.8s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(99 78) rotate(100)"><path class="lf" style="--d:0.95s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(64 68) rotate(150)"><path class="lf" style="--d:1.0s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(93 118) rotate(70)"><path class="lf" style="--d:1.1s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(97 160) rotate(105)"><path class="lf" style="--d:1.25s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g></svg>
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div><div class="tc-name">Reklame på sosiale medium</div><div class="tc-desc">Innlegg og annonsar til Facebook og Instagram, retta mot folk der du held til.</div></div>
       </div>
       <div class="tc reveal rd1">
+        <svg class="vine" viewBox="0 0 120 200" aria-hidden="true"><path class="vn" pathLength="1" d="M6-4C26 22 58 8 80 30S106 72 98 102S84 152 100 198"/><path class="vn vn2" pathLength="1" d="M80 30C70 44 74 58 64 70"/><path class="vn vn2" pathLength="1" d="M98 102c9 3 11 14 3 17c-6 2-8-6-2-7"/><g transform="translate(28 14) rotate(-25)"><path class="lf" style="--d:0.5s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(58 16) rotate(25)"><path class="lf" style="--d:0.65s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(84 40) rotate(65)"><path class="lf" style="--d:0.8s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(99 78) rotate(100)"><path class="lf" style="--d:0.95s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(64 68) rotate(150)"><path class="lf" style="--d:1.0s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(93 118) rotate(70)"><path class="lf" style="--d:1.1s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(97 160) rotate(105)"><path class="lf" style="--d:1.25s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g></svg>
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div><div class="tc-name">Google-profil</div><div class="tc-desc">Oppsett av bedriftsprofilen din på Google Maps, med bilete, opningstider og kontaktinfo.</div></div>
       </div>
       <div class="tc reveal rd2">
+        <svg class="vine" viewBox="0 0 120 200" aria-hidden="true"><path class="vn" pathLength="1" d="M6-4C26 22 58 8 80 30S106 72 98 102S84 152 100 198"/><path class="vn vn2" pathLength="1" d="M80 30C70 44 74 58 64 70"/><path class="vn vn2" pathLength="1" d="M98 102c9 3 11 14 3 17c-6 2-8-6-2-7"/><g transform="translate(28 14) rotate(-25)"><path class="lf" style="--d:0.5s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(58 16) rotate(25)"><path class="lf" style="--d:0.65s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(84 40) rotate(65)"><path class="lf" style="--d:0.8s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(99 78) rotate(100)"><path class="lf" style="--d:0.95s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(64 68) rotate(150)"><path class="lf" style="--d:1.0s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(93 118) rotate(70)"><path class="lf" style="--d:1.1s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g><g transform="translate(97 160) rotate(105)"><path class="lf" style="--d:1.25s" d="M0 0C5-6 13-7 19 0C13 7 5 6 0 0Z"/></g></svg>
         <div class="tc-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div><div class="tc-name">Hosting og drift</div><div class="tc-desc">Domene, hosting og små endringar er inkludert. Du treng ikkje tenkje på det tekniske.</div></div>
       </div>
