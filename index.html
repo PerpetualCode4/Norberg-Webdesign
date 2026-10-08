@@ -185,10 +185,7 @@ nav.dn a:hover::after{width:100%}
   background:radial-gradient(42% 55% at 50% 50%,rgba(92,184,92,.16) 0%,rgba(92,184,92,.06) 40%,transparent 72%);
   filter:blur(40px);opacity:.9;animation:aur 16s ease-in-out infinite}
 @keyframes aur{0%,100%{transform:translate(-52%,-50%) scale(1);opacity:.75}50%{transform:translate(-48%,-52%) scale(1.12);opacity:1}}
-.hrole{margin-top:26px;font-size:15px;letter-spacing:.02em;color:var(--dim)}
-.roll{color:var(--g);font-weight:600;display:inline-block;transition:opacity .4s ease,transform .4s ease}
-.roll.out{opacity:0;transform:translateY(-8px)}
-@media(prefers-reduced-motion:reduce){.aurora{animation:none}.roll{transition:none}}
+@media(prefers-reduced-motion:reduce){.aurora{animation:none}}
 
 .hero-inner{position:relative;z-index:2;width:min(var(--W),100%);margin-inline:auto;padding-inline:22px;padding-bottom:64px;display:flex;flex-direction:column;align-items:center;text-align:center}
 
@@ -859,8 +856,6 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
       <a href="#kontakt" class="btn btn-ol">Ta kontakt</a>
     </div>
 
-    <p class="hrole">Nettsider for <span class="roll" id="roll">maskinfirma</span></p>
-
   </div>
 
   <div class="scroll-hint" aria-hidden="true">
@@ -1243,23 +1238,6 @@ function statTransition(){
 }
 statTypeForward();
 
-// Hero: roterande ord
-(function(){
-  const el=document.getElementById('roll');
-  if(!el) return;
-  const words=['maskinfirma','campingplassar','arrangement','frisørsalongar','bedrifta di'];
-  let i=0;
-  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if(reduce) return;
-  setInterval(()=>{
-    el.classList.add('out');
-    setTimeout(()=>{
-      i=(i+1)%words.length;
-      el.textContent=words[i];
-      el.classList.remove('out');
-    },400);
-  },2600);
-})();
 
 // Hero: magnetiske knappar
 (function(){
