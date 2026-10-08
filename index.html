@@ -181,10 +181,16 @@ nav.dn a:hover::after{width:100%}
 .orb1{width:700px;height:700px;background:radial-gradient(circle,rgba(92,184,92,.07) 0%,transparent 70%);top:-200px;right:-150px;filter:blur(60px);z-index:1}
 .orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(92,184,92,.05) 0%,transparent 70%);bottom:0;left:-120px;filter:blur(60px);animation-delay:-4.5s;z-index:1}
 @keyframes orbF{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.05)}}
+.aurora{position:absolute;z-index:1;top:50%;left:50%;width:120vw;height:720px;transform:translate(-50%,-50%);pointer-events:none;
+  background:radial-gradient(42% 55% at 50% 50%,rgba(92,184,92,.16) 0%,rgba(92,184,92,.06) 40%,transparent 72%);
+  filter:blur(40px);opacity:.9;animation:aur 16s ease-in-out infinite}
+@keyframes aur{0%,100%{transform:translate(-52%,-50%) scale(1);opacity:.75}50%{transform:translate(-48%,-52%) scale(1.12);opacity:1}}
+.hrole{margin-top:26px;font-size:15px;letter-spacing:.02em;color:var(--dim)}
+.roll{color:var(--g);font-weight:600;display:inline-block;transition:opacity .4s ease,transform .4s ease}
+.roll.out{opacity:0;transform:translateY(-8px)}
+@media(prefers-reduced-motion:reduce){.aurora{animation:none}.roll{transition:none}}
 
 .hero-inner{position:relative;z-index:2;width:min(var(--W),100%);margin-inline:auto;padding-inline:22px;padding-bottom:64px;display:flex;flex-direction:column;align-items:center;text-align:center}
-.htrust{margin-top:30px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;font-size:13px;letter-spacing:.04em;color:var(--dim)}
-.htrust span{color:var(--g);opacity:.7}
 
 .hero-logo-wrap{
   margin-bottom:12px;
@@ -837,6 +843,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
 
   <div class="orb orb1" aria-hidden="true"></div>
   <div class="orb orb2" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
 
   <div class="hero-inner">
 
@@ -852,7 +859,7 @@ footer{background:#030a04;padding:28px 0;border-top:1px solid var(--border)}
       <a href="#kontakt" class="btn btn-ol">Ta kontakt</a>
     </div>
 
-    <p class="htrust">Gratis utkast<span>·</span>Du betaler først når du er nøgd<span>·</span>Sogn og heile Noreg</p>
+    <p class="hrole">Nettsider for <span class="roll" id="roll">maskinfirma</span></p>
 
   </div>
 
@@ -1235,6 +1242,40 @@ function statTransition(){
   }, 160);
 }
 statTypeForward();
+
+// Hero: roterande ord
+(function(){
+  const el=document.getElementById('roll');
+  if(!el) return;
+  const words=['maskinfirma','campingplassar','arrangement','frisørsalongar','bedrifta di'];
+  let i=0;
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce) return;
+  setInterval(()=>{
+    el.classList.add('out');
+    setTimeout(()=>{
+      i=(i+1)%words.length;
+      el.textContent=words[i];
+      el.classList.remove('out');
+    },400);
+  },2600);
+})();
+
+// Hero: magnetiske knappar
+(function(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  if(matchMedia('(hover:none)').matches) return;
+  document.querySelectorAll('.hbtns .btn').forEach(btn=>{
+    btn.style.transition='transform .2s ease';
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      const x=e.clientX-r.left-r.width/2;
+      const y=e.clientY-r.top-r.height/2;
+      btn.style.transform=`translate(${x*0.18}px, ${y*0.28}px)`;
+    });
+    btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+  });
+})();
 
 </script>
 </body>
