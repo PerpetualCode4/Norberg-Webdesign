@@ -134,6 +134,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
 .facts div:nth-child(even){padding-left:1rem;border-left:1px solid var(--line)}
 .facts dd{font-size:1.125rem;font-weight:500;line-height:1.35;margin-top:.3rem}
 
+.ticket__fine{margin-top:1.25rem;font-size:.875rem;line-height:1.6;color:var(--muted)}
 .ticket__stub{position:relative;padding:clamp(1.75rem,5vw,3rem);border-top:2px dashed rgba(241,235,224,.18);
   display:flex;flex-direction:column;justify-content:space-between;gap:1.75rem}
 .ticket__stub::before,.ticket__stub::after{content:"";position:absolute;width:26px;height:26px;border-radius:50%;
@@ -194,7 +195,8 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
   .btn--sm{min-height:42px;padding:.7rem 1.25rem;font-size:.75rem}
   .hero{min-height:min(75vh,820px)}
   .ticket{grid-template-columns:1fr 300px}
-  .ticket__stub{border-top:0;border-left:2px dashed rgba(241,235,224,.18)}
+  .ticket__fine{margin-top:1.25rem;font-size:.875rem;line-height:1.6;color:var(--muted)}
+.ticket__stub{border-top:0;border-left:2px dashed rgba(241,235,224,.18)}
   .ticket__stub::before,.ticket__stub::after{left:-14px;right:auto}
   .ticket__stub::before{top:-14px}
   .ticket__stub::after{top:auto;bottom:-14px}
@@ -290,6 +292,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
               <div><dt class="label">Drikke</dt><dd>Ta med eigen</dd></div>
               <div><dt class="label">Alder</dt><dd>18 år</dd></div>
             </dl>
+            <p class="ticket__fine">Kvifor fest? Brage og Brage har bursdag. Meir treng du ikkje vite.</p>
             <span class="stamp" aria-hidden="true">Gratis</span>
           </div>
           <div class="ticket__stub">
