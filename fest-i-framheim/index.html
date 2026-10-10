@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Fest i Framheim · 23. oktober 2026</title>
-<meta name="description" content="Fest i Framheim, Jostedalen. Fredag 23. oktober 2026, 21:00–03:00. Gratis inngang, 18 år. Påmelding på førehand.">
+<meta name="description" content="Fest i Framheim, Fossøyane 120 i Jostedalen. Fredag 23. oktober 2026, 21:00–03:00. Gratis inngang, 18 år. Påmelding på førehand.">
 <meta name="theme-color" content="#10141f">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fest i Framheim">
@@ -156,6 +156,12 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
 .js .stamp{opacity:0;transform:rotate(-11deg) scale(2.2)}
 .js .ticket.in .stamp{opacity:.92;transform:rotate(-11deg) scale(1);transition:transform .45s cubic-bezier(.5,1.6,.4,1) .55s,opacity .2s ease-out .55s}
 
+/* Finn fram */
+.place{display:grid;gap:1.5rem;margin-top:clamp(2.5rem,6vw,4rem)}
+.place img{width:100%;height:auto;filter:saturate(.8) brightness(.88);border:1px solid var(--line);border-radius:var(--radius)}
+.place__addr{font-size:clamp(2.25rem,7vw,3.5rem);margin:.75rem 0 .5rem}
+.place__credit{margin-top:1.25rem;font-size:.8125rem;color:var(--muted)}
+
 /* Påmelding */
 .signup{position:relative;overflow:hidden;text-align:center;border-top:1px solid var(--line);
   background:radial-gradient(55% 60% at 50% 115%,rgba(200,64,43,.22),transparent 70%),var(--night)}
@@ -190,6 +196,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
   .ticket__stub::before{top:-14px}
   .ticket__stub::after{top:auto;bottom:-14px}
   .facts{grid-template-columns:repeat(3,1fr)}
+  .place{grid-template-columns:minmax(0,590px) 1fr;align-items:end;gap:clamp(2rem,4vw,3.5rem)}
   .facts div{padding:1.1rem 1rem 1.25rem!important;border-left:1px solid var(--line)}
   .facts div:nth-child(3n+1){padding-left:0!important;border-left:0}
 }
@@ -275,7 +282,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
             <dl class="facts">
               <div><dt class="label">Dato</dt><dd>Fredag 23. oktober</dd></div>
               <div><dt class="label">Tid</dt><dd>21:00–03:00</dd></div>
-              <div><dt class="label">Stad</dt><dd>Framheim, Jostedalen</dd></div>
+              <div><dt class="label">Stad</dt><dd>Fossøyane 120, Jostedalen</dd></div>
               <div><dt class="label">Inngang</dt><dd>Gratis</dd></div>
               <div><dt class="label">Drikke</dt><dd>Ta med eigen</dd></div>
               <div><dt class="label">Alder</dt><dd>18 år</dd></div>
@@ -287,10 +294,19 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
               <div class="stub__no"><p class="label">Aldersgrense</p><p class="label">23.10</p></div>
               <p class="stub__big display">18<small>+</small></p>
             </div>
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Framheim+Jostedalen" target="_blank" rel="noopener">Opne i Google Maps <span aria-hidden="true">&nearr;</span></a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Foss%C3%B8yane+120%2C+Jostedalen" target="_blank" rel="noopener">Opne i Google Maps <span aria-hidden="true">&nearr;</span></a>
           </div>
         </article>
       </div>
+      <figure class="place reveal">
+        <img src="Bilder/framheim-gata.jpg" alt="Framheim: kvitt trehus med blå vindaugskarmar, ved vegen i Fossøyane" width="590" height="377" loading="lazy">
+        <figcaption>
+          <p class="label">Finn fram</p>
+          <p class="place__addr display">Fossøyane 120</p>
+          <p>Jostedalen. Det kvite huset ved vegen.</p>
+          <p class="place__credit">Bilde: Google Street View</p>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
