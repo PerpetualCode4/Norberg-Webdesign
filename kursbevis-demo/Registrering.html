@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<style>
+  :root { --ink:#13294B; --gold:#F8B008; --paper:#FAF8F4; --brown:#6A6050; --line:#DDD6C9; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, system-ui, Arial, sans-serif; background: var(--paper); color: var(--ink); }
+  .wrap { max-width: 440px; margin: 0 auto; padding: 32px 20px 48px; }
+  .topp { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--brown); }
+  h1 { font-size: 30px; margin: 8px 0 4px; line-height: 1.1; }
+  .info { color: var(--brown); margin: 0 0 26px; }
+  label { display: block; font-weight: 700; margin: 18px 0 6px; }
+  input[type=text], input[type=email] { width: 100%; font-size: 18px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  .samtykke { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0; font-size: 15px; color: var(--brown); }
+  .samtykke input { width: 22px; height: 22px; margin-top: 1px; flex: none; }
+  .samtykke a { color: var(--ink); }
+  button { width: 100%; min-height: 56px; font-size: 18px; font-weight: 700; border: 0; border-radius: 8px; background: var(--ink); color: #fff; cursor: pointer; }
+  button:disabled { opacity: .6; }
+  .felle { position: absolute; left: -9999px; }
+  .feil { color: #B3261E; margin-top: 14px; min-height: 1.2em; }
+  .ok { text-align: center; padding-top: 40px; }
+  .ok .hake { width: 72px; height: 72px; border-radius: 50%; background: var(--gold); margin: 0 auto 18px; display: grid; place-items: center; font-size: 38px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topp">OVE FORTUN FØRSTEHJELP</div>
+  <? if (!kurs.finst) { ?>
+    <h1>Fann ikkje kurset</h1>
+    <p class="info">Sjekk at du skanna rett QR-kode.</p>
+  <? } else if (!kurs.ope) { ?>
+    <h1>Registreringa er stengd</h1>
+    <p class="info">Kursbevisa for dette kurset er allereie sende.</p>
+  <? } else { ?>
+    <div id="skjema">
+      <h1><?= kurs.kurstype ?></h1>
+      <p class="info"><?= kurs.dato ?><? if (kurs.stad) { ?> · <?= kurs.stad ?><? } ?></p>
+      <p>Skriv inn namnet ditt slik det skal stå på kursbeviset, og e-posten du vil få det tilsendt på.</p>
+      <label for="namn">Fullt namn</label>
+      <input id="namn" type="text" autocomplete="name" maxlength="80">
+      <label for="epost">E-post</label>
+      <input id="epost" type="email" autocomplete="email" inputmode="email" maxlength="120">
+      <input class="felle" id="felle" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="samtykke"><input id="samtykke" type="checkbox">
+        <span>Eg godtek at namn og e-post blir lagra for å sende kursbeviset. Sjå <a href="https://www.ovefortun.no/personvern.html" target="_blank" rel="noopener">personvern</a>.</span></label>
+      <button id="send">Registrer meg</button>
+      <div class="feil" id="feil" role="alert"></div>
+    </div>
+    <div id="takk" class="ok" hidden>
+      <div class="hake">✓</div>
+      <h1>Du er registrert</h1>
+      <p class="info">Kursbeviset kjem på e-post når kurset er ferdig.</p>
+    </div>
+    <script>
+      const knapp = document.getElementById('send');
+      knapp.addEventListener('click', () => {
+        const feil = document.getElementById('feil');
+        feil.textContent = '';
+        knapp.disabled = true; knapp.textContent = 'Registrerer…';
+        google.script.run
+          .withSuccessHandler(() => { document.getElementById('skjema').hidden = true; document.getElementById('takk').hidden = false; })
+          .withFailureHandler(e => { feil.textContent = e.message; knapp.disabled = false; knapp.textContent = 'Registrer meg'; })
+          .registrer(<?= kurs.id ?>, document.getElementById('namn').value, document.getElementById('epost').value,
+                     document.getElementById('samtykke').checked, document.getElementById('felle').value);
+      });
+    </script>
+  <? } ?>
+</div>
+</body>
+</html>

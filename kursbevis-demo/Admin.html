@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<style>
+  :root { --ink:#13294B; --gold:#F8B008; --paper:#FAF8F4; --brown:#6A6050; --line:#DDD6C9; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, system-ui, Arial, sans-serif; background: var(--paper); color: var(--ink); }
+  .wrap { max-width: 520px; margin: 0 auto; padding: 28px 20px 60px; }
+  .topp { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--brown); }
+  h1 { font-size: 28px; margin: 6px 0 20px; }
+  h2 { font-size: 22px; margin: 28px 0 10px; }
+  label { display: block; font-weight: 700; margin: 14px 0 6px; }
+  input, select { width: 100%; font-size: 18px; padding: 13px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+  .btn { display: block; width: 100%; min-height: 56px; font-size: 18px; font-weight: 700; border: 0; border-radius: 8px; background: var(--ink); color: #fff; cursor: pointer; margin-top: 16px; }
+  .btn.gul { background: var(--gold); color: var(--ink); }
+  .btn.lys { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .btn:disabled { opacity: .6; }
+  .feil { color: #B3261E; margin-top: 12px; min-height: 1.2em; }
+  .kort { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-top: 10px; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .kort small { display: block; color: var(--brown); }
+  .merke { font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: var(--gold); white-space: nowrap; }
+  .merke.sendt { background: #E3EFE3; color: #24622A; }
+  .merke.sletta { background: #eee; color: #777; }
+  #qr { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px; text-align: center; margin-top: 12px; }
+  #qr img { width: 100%; max-width: 300px; height: auto; image-rendering: pixelated; }
+  ul.liste { list-style: none; padding: 0; margin: 8px 0 0; }
+  ul.liste li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  ul.liste small { display: block; color: var(--brown); word-break: break-all; }
+  .x { border: 0; background: none; font-size: 22px; color: var(--brown); cursor: pointer; padding: 6px 10px; }
+  .tilbake { background: none; border: 0; color: var(--ink); font-weight: 700; font-size: 16px; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topp">OVE FORTUN FØRSTEHJELP</div>
+
+  <!-- Innlogging -->
+  <section id="v-login">
+    <h1>Kursbevis</h1>
+    <label for="pin">PIN-kode</label>
+    <input id="pin" type="password" inputmode="numeric" autocomplete="current-password">
+    <button class="btn" id="b-login">Logg inn</button>
+    <div class="feil" id="f-login" role="alert"></div>
+  </section>
+
+  <!-- Oversikt -->
+  <section id="v-oversikt" hidden>
+    <h1>Kursbevis</h1>
+    <button class="btn gul" id="b-ny">+ Nytt kurs</button>
+    <h2>Kurs</h2>
+    <div id="kursliste"></div>
+  </section>
+
+  <!-- Nytt kurs -->
+  <section id="v-ny" hidden>
+    <button class="tilbake" data-til="oversikt">← Tilbake</button>
+    <h1>Nytt kurs</h1>
+    <label for="kurstype">Kurstype</label>
+    <select id="kurstype">
+      <? kurstypar.forEach(function(t){ ?><option><?= t ?></option><? }); ?>
+    </select>
+    <label for="stad">Stad / bedrift</label>
+    <input id="stad" type="text" maxlength="80" placeholder="Til dømes Statnett, Vågå">
+    <button class="btn" id="b-lag">Lag kurs og QR-kode</button>
+    <div class="feil" id="f-ny" role="alert"></div>
+  </section>
+
+  <!-- Eitt kurs -->
+  <section id="v-kurs" hidden>
+    <button class="tilbake" data-til="oversikt">← Alle kurs</button>
+    <h1 id="k-tittel"></h1>
+    <div id="k-info" style="color:var(--brown)"></div>
+    <div id="qr-blokk">
+      <div id="qr"></div>
+      <p style="text-align:center;color:var(--brown)">La deltakarane skanne koden</p>
+    </div>
+    <h2>Deltakarar (<span id="k-antal">0</span>)</h2>
+    <ul class="liste" id="k-liste"></ul>
+    <button class="btn lys" id="b-oppdater">Oppdater lista</button>
+    <div id="manuell">
+      <label for="m-namn">Legg til manuelt</label>
+      <input id="m-namn" type="text" placeholder="Namn" maxlength="80">
+      <input id="m-epost" type="email" placeholder="E-post" maxlength="120" style="margin-top:8px">
+      <button class="btn lys" id="b-legg">Legg til</button>
+    </div>
+    <button class="btn gul" id="b-ferdig">Ferdig – send kursbevis</button>
+    <div class="feil" id="f-kurs" role="alert"></div>
+  </section>
+</div>
+
+<script>
+  let token = null, aktivt = null;
+  const $ = id => document.getElementById(id);
+  const vis = namn => ['login','oversikt','ny','kurs'].forEach(v => $('v-' + v).hidden = v !== namn);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+
+  function kall(fn, args, ok, feilEl, knapp) {
+    if (knapp) knapp.disabled = true;
+    if (feilEl) feilEl.textContent = '';
+    google.script.run
+      .withSuccessHandler(r => { if (knapp) knapp.disabled = false; ok(r); })
+      .withFailureHandler(e => {
+        if (knapp) knapp.disabled = false;
+        if (/utløpt/.test(e.message)) { token = null; vis('login'); $('f-login').textContent = e.message; return; }
+        if (feilEl) feilEl.textContent = e.message;
+      })[fn].apply(null, args);
+  }
+
+  $('b-login').onclick = () => kall('loggInn', [$('pin').value], t => { token = t; $('pin').value = ''; lastOversikt(); }, $('f-login'), $('b-login'));
+  $('pin').addEventListener('keydown', e => { if (e.key === 'Enter') $('b-login').click(); });
+  document.querySelectorAll('[data-til]').forEach(b => b.onclick = () => lastOversikt());
+
+  function lastOversikt() {
+    vis('oversikt');
+    kall('listKurs', [token], liste => {
+      $('kursliste').innerHTML = liste.length ? liste.map(k =>
+        `<div class="kort" data-id="${esc(k.id)}"><div><strong>${esc(k.kurstype)}</strong><small>${esc(k.dato)}${k.stad ? ' · ' + esc(k.stad) : ''} · ${k.antal} deltakarar</small></div>
+         <span class="merke ${esc(k.status)}">${k.status === 'ope' ? 'Ope' : k.status === 'sendt' ? 'Sendt' : 'Sletta'}</span></div>`).join('')
+        : '<p style="color:var(--brown)">Ingen kurs enno.</p>';
+      document.querySelectorAll('.kort').forEach(el => el.onclick = () => opneKurs(el.dataset.id));
+    });
+  }
+
+  $('b-ny').onclick = () => { $('stad').value = ''; vis('ny'); };
+  $('b-lag').onclick = () => kall('nyttKurs', [token, { kurstype: $('kurstype').value, stad: $('stad').value }], r => opneKurs(r.id), $('f-ny'), $('b-lag'));
+
+  function opneKurs(id) { aktivt = id; vis('kurs'); kall('hentKurs', [token, id], visKurs, $('f-kurs')); }
+
+  function visKurs(k) {
+    $('k-tittel').textContent = k.kurstype;
+    $('k-info').textContent = k.dato + (k.stad ? ' · ' + k.stad : '');
+    const ope = k.status === 'ope';
+    $('qr-blokk').hidden = !ope; $('manuell').hidden = !ope; $('b-ferdig').hidden = !ope; $('b-oppdater').hidden = !ope;
+    if (ope) {
+      const q = qrcode(0, 'M'); q.addData(k.url); q.make();
+      $('qr').innerHTML = q.createImgTag(8, 8);
+    }
+    $('k-antal').textContent = k.deltakarar.length;
+    $('k-liste').innerHTML = k.deltakarar.map(d =>
+      `<li><div><strong>${esc(d.namn)}</strong><small>${esc(d.epost)}</small></div>${ope ? `<button class="x" data-rad="${d.rad}" aria-label="Fjern ${esc(d.namn)}">×</button>` : ''}</li>`).join('')
+      || '<li style="color:var(--brown)">Ingen registrerte enno.</li>';
+    document.querySelectorAll('.x').forEach(b => b.onclick = () => {
+      if (confirm('Fjerne denne deltakaren?')) kall('fjernDeltakar', [token, aktivt, Number(b.dataset.rad)], visKurs, $('f-kurs'));
+    });
+  }
+
+  $('b-oppdater').onclick = () => kall('hentKurs', [token, aktivt], visKurs, $('f-kurs'), $('b-oppdater'));
+  $('b-legg').onclick = () => kall('leggTilDeltakar', [token, aktivt, $('m-namn').value, $('m-epost').value],
+    k => { $('m-namn').value = ''; $('m-epost').value = ''; visKurs(k); }, $('f-kurs'), $('b-legg'));
+
+  $('b-ferdig').onclick = () => {
+    const n = $('k-antal').textContent;
+    if (!confirm('Sende kursbevis til ' + n + ' deltakarar? Dette kan ikkje angrast.')) return;
+    $('b-ferdig').textContent = 'Sender…';
+    kall('fullforKurs', [token, aktivt], r => {
+      $('b-ferdig').textContent = 'Ferdig – send kursbevis';
+      alert('Sendt til ' + r.sendt + ' av ' + r.totalt + ' deltakarar.' + (r.feil.length ? '\nIkkje sendt til: ' + r.feil.join(', ') : ''));
+      opneKurs(aktivt);
+    }, $('f-kurs'), $('b-ferdig'));
+  };
+</script>
+</body>
+</html>
