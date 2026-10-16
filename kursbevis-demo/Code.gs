@@ -44,6 +44,21 @@ function settPin() {
   Logger.log('PIN lagra. Hugs å slette PIN-en frå koden.');
 }
 
+/**
+ * TEST: sender eit døme-kursbevis til ei e-postadresse.
+ * Skriv adressa mellom hermeteikna, vel funksjonen øvst og trykk Køyr.
+ */
+function testUtsending() {
+  const til = ''; // <- di andre e-postadresse
+  if (!til) throw new Error('Skriv inn ei e-postadresse i testUtsending().');
+  const dato = fmtDato_(new Date());
+  const pdf = lagPdf_([{ namn: 'Kari Nordmann' }], 'Grunnkurs i førstehjelp', 'Statnett, Sunndalsøra', dato, 'Kursbevis - Kari Nordmann');
+  GmailApp.sendEmail(til, 'TEST – Kursbevis – Grunnkurs i førstehjelp',
+    'Hei Kari Nordmann!\n\nTakk for at du var med på kurset. Kursbeviset ditt ligg vedlagt.\n\nHelsing\n' + KONFIG.INSTRUKTOR + '\n' + KONFIG.AVSENDARNAMN,
+    { name: KONFIG.AVSENDARNAMN, replyTo: KONFIG.SVAR_TIL, attachments: [pdf] });
+  Logger.log('Test sendt til ' + til);
+}
+
 // ---------- Nettsider ----------
 function doGet(e) {
   const kursId = e && e.parameter && e.parameter.k;

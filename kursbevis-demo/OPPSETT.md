@@ -16,6 +16,11 @@ Tre filer: `Code.gs`, `Admin.html`, `Registrering.html`.
    (Åtvaringa kjem fordi det er ditt eige skript, ikkje ei app frå butikken.)
 3. Gå til `settPin`, skriv ein PIN (minst 6 siffer) mellom hermeteikna, køyr funksjonen, og **slett PIN-en frå koden igjen** og lagre.
 
+## 2b. Rask test av e-post (valfritt)
+1. Gå til `testUtsending`, skriv di andre e-postadresse mellom hermeteikna og trykk **Køyr**.
+2. Sjekk innboksen: du skal få eit døme-kursbevis som PDF frå «Ove Fortun Førstehjelp».
+3. Trykk «Svar» i e-posten og sjå at svaradressa er `SVAR_TIL`.
+
 ## 3. Publiser
 1. **Distribuer → Ny distribusjon → Type: Nettapp**.
 2. Køyr som: **Meg**. Kven har tilgang: **Alle**.
